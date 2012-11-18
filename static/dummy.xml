@@ -1,0 +1,2147 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:bib="http://bibtexml.sf.net/" id="m9003">
+  <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">CNXML 0.5 Stress Test</name>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+  <md:version xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">2.68</md:version>
+  <md:created xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">2000/06/22</md:created>
+  <md:revised xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">2008/12/19 14:01:40.056 US/Central</md:revised>
+  <md:authorlist xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+      <md:author xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="mizar">
+      <md:firstname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Christine</md:firstname>
+
+      <md:surname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Donica</md:surname>
+      <md:email xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">mizar@alumni.rice.edu</md:email>
+    </md:author>
+      <md:author xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="maxwell">
+      <md:firstname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Max</md:firstname>
+
+      <md:surname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Starkenburg</md:surname>
+      <md:email xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">maxwell@rice.edu</md:email>
+    </md:author>
+      <md:author xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="brentmh">
+      <md:firstname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Brent</md:firstname>
+      <md:othername xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Michael</md:othername>
+      <md:surname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Hendricks</md:surname>
+      <md:email xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">brentmh@rice.edu</md:email>
+    </md:author>
+      <md:author xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cbearden">
+      <md:firstname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Charles</md:firstname>
+      <md:othername xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">F.</md:othername>
+      <md:surname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Bearden</md:surname>
+      <md:email xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">cbearden@rice.edu</md:email>
+    </md:author>
+  </md:authorlist>
+
+  <md:maintainerlist xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+    <md:maintainer xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="mizar">
+      <md:firstname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Christine</md:firstname>
+
+      <md:surname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Donica</md:surname>
+      <md:email xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">mizar@alumni.rice.edu</md:email>
+    </md:maintainer>
+    <md:maintainer xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="maxwell">
+      <md:firstname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Max</md:firstname>
+
+      <md:surname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Starkenburg</md:surname>
+      <md:email xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">maxwell@rice.edu</md:email>
+    </md:maintainer>
+    <md:maintainer xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="brentmh">
+      <md:firstname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Brent</md:firstname>
+      <md:othername xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Michael</md:othername>
+      <md:surname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Hendricks</md:surname>
+      <md:email xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">brentmh@rice.edu</md:email>
+    </md:maintainer>
+    <md:maintainer xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cbearden">
+      <md:firstname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Charles</md:firstname>
+      <md:othername xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">F.</md:othername>
+      <md:surname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Bearden</md:surname>
+      <md:email xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">cbearden@rice.edu</md:email>
+    </md:maintainer>
+    <md:maintainer xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="bnwest">
+      <md:firstname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Brian</md:firstname>
+      <md:othername xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Neal</md:othername>
+      <md:surname xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">West</md:surname>
+      <md:email xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">bnwest@cnx.org</md:email>
+    </md:maintainer>
+  </md:maintainerlist>
+
+
+
+  <md:abstract xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This module attempts to use all of the CNXML 0.5 tags.  It supplies examples of all the tags.  People interested in this module would be those who are learning CNXML and those who need an example for testing, such as stylesheets.</md:abstract>
+</metadata>
+
+  <content xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+    <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="opening_paragraph">This brief paragraph was put in before a section tag
+to ensure that it was styled correctly.</para><equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="content_equation">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This equation has been thrown in as a child of content for styling purposes.</name>
+      <m:math mode="inline">
+        <m:apply>
+          <m:eq/>
+          <m:apply>
+            <m:cos/>
+
+            <m:apply>
+              <m:times/>
+              <m:cn>2</m:cn>
+              <m:pi/>
+              <m:ci>f</m:ci>
+              <m:ci>t</m:ci>
+            </m:apply>
+
+          </m:apply>
+          <m:apply>
+            <m:divide/>
+            <m:apply>
+              <m:plus/>
+              <m:apply>
+                <m:exp/>
+                <m:apply>
+                  <m:times/>
+
+                  <m:imaginaryi/>
+                  <m:cn>2</m:cn>
+                  <m:pi/>
+                  <m:ci>f</m:ci>
+                  <m:ci>t</m:ci>
+                </m:apply>
+              </m:apply>
+
+              <m:apply>
+                <m:exp/>
+                <m:apply>
+                  <m:minus/>
+                  <m:apply>
+                    <m:times/>
+                    <m:imaginaryi/>
+                    <m:cn>2</m:cn>
+
+                    <m:pi/>
+                    <m:ci>f</m:ci>
+                    <m:ci>t</m:ci>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:apply>
+            <m:apply>
+
+              <m:times/>
+              <m:cn>2</m:cn>
+            </m:apply>
+          </m:apply>
+        </m:apply>
+      </m:math>
+    </equation>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec01">
+
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">General Example with Equation</name>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="p01">
+  The complex exponential defines the notion of frequency: It is
+  the <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">only</emphasis> signal that contains only one
+  frequency component.  The sinusoid consists of two frequency
+  components: one at the frequency
+
+  <m:math mode="inline">
+          <m:ci>
+            <m:mo>+</m:mo>
+            <m:msub>
+
+              <m:mi>f</m:mi>
+              <m:mn>0</m:mn>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        <!--$+f_0$-->
+
+  and the other at
+
+  <m:math mode="inline">
+          <m:apply>
+
+            <m:minus/>
+            <m:ci>
+              <m:msub>
+                <m:mi>f</m:mi>
+                <m:mn>0</m:mn>
+              </m:msub>
+            </m:ci>
+          </m:apply>
+
+        </m:math>
+        <!--$-f_0$-->.
+
+  <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="eqn3">
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This is Euler's relation relating things like e's and cosines</name>
+          <m:math mode="inline">
+            <m:apply>
+              <m:eq/>
+              <m:apply>
+                <m:cos/>
+
+                <m:apply>
+                  <m:times/>
+                  <m:cn>2</m:cn>
+                  <m:pi/>
+                  <m:ci>f</m:ci>
+                  <m:ci>t</m:ci>
+                </m:apply>
+
+              </m:apply>
+              <m:apply>
+                <m:divide/>
+                <m:apply>
+                  <m:plus/>
+                  <m:apply>
+                    <m:exp/>
+                    <m:apply>
+                      <m:times/>
+
+                      <m:imaginaryi/>
+                      <m:cn>2</m:cn>
+                      <m:pi/>
+                      <m:ci>f</m:ci>
+                      <m:ci>t</m:ci>
+                    </m:apply>
+                  </m:apply>
+
+                  <m:apply>
+                    <m:exp/>
+                    <m:apply>
+                      <m:minus/>
+                      <m:apply>
+                        <m:times/>
+                        <m:imaginaryi/>
+                        <m:cn>2</m:cn>
+
+                        <m:pi/>
+                        <m:ci>f</m:ci>
+                        <m:ci>t</m:ci>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+
+                  <m:times/>
+                  <m:cn>2</m:cn>
+                </m:apply>
+              </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+        <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="eqn4">
+
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Euler's relation</name>
+          <m:math mode="inline">
+            <m:apply>
+              <m:eq/>
+              <m:apply>
+                <m:sin/>
+                <m:apply>
+                  <m:times/>
+
+                  <m:cn>2</m:cn>
+                  <m:pi/>
+                  <m:ci>f</m:ci>
+                  <m:ci>t</m:ci>
+                </m:apply>
+              </m:apply>
+              <m:apply>
+
+                <m:divide/>
+                <m:apply>
+                  <m:minus/>
+                  <m:apply>
+                    <m:exp/>
+                    <m:apply>
+                      <m:times/>
+                      <m:imaginaryi/>
+                      <m:cn>2</m:cn>
+
+                      <m:pi/>
+                      <m:ci>f</m:ci>
+                      <m:ci>t</m:ci>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:exp/>
+                    <m:apply>
+
+                      <m:minus/>
+                      <m:apply>
+                        <m:times/>
+                        <m:imaginaryi/>
+                        <m:cn>2</m:cn>
+                        <m:pi/>
+                        <m:ci>f</m:ci>
+                        <m:ci>t</m:ci>
+
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:times/>
+                  <m:cn>2</m:cn>
+                  <m:imaginaryi/>
+
+                </m:apply>
+              </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+        <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="eqn5">
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Another Euler's relation</name>
+          <m:math mode="inline">
+
+            <m:apply>
+              <m:eq/>
+              <m:apply>
+                <m:exp/>
+                <m:apply>
+                  <m:times/>
+                  <m:imaginaryi/>
+                  <m:cn>2</m:cn>
+
+                  <m:pi/>
+                  <m:ci>f</m:ci>
+                  <m:ci>t</m:ci>
+                </m:apply>
+              </m:apply>
+              <m:apply>
+                <m:plus/>
+                <m:apply>
+
+                  <m:cos/>
+                  <m:apply>
+                    <m:times/>
+                    <m:cn>2</m:cn>
+                    <m:pi/>
+                    <m:ci>f</m:ci>
+                    <m:ci>t</m:ci>
+
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:times/>
+                  <m:imaginaryi/>
+                  <m:apply>
+                    <m:sin/>
+                    <m:apply>
+                      <m:times/>
+
+                      <m:cn>2</m:cn>
+                      <m:pi/>
+                      <m:ci>f</m:ci>
+                      <m:ci>t</m:ci>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+
+              </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+
+
+  The complex exponential signal can thus be written in terms of
+  its real and imaginary parts using Euler's relation.  Thus,
+  sinusoidal signals can be expressed as either the real or the
+  imaginary part of a complex exponential signal (the choice
+  depends on whether cosine or sine phase is needed) or as the
+  sum of two complex exponentials.  These two decompositions are
+  mathematically equivalent to each other.
+
+      </para>
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec1">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Section:  ICSA</name>
+
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="secp1">
+  The Rice Sailing Team is part of a sailing coalition called ICSA which
+  stands for  Inter-Collegiate Sailing Association.  The ICSA is the
+  governing body for collegete sailing programs in the US.  Volunteers of
+  ICSA develop the racing rules.  They also organize the national
+  regattas.  To be a member of ICSA, a college must pay money to a
+  sub-district.
+      </para>
+      <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec2">
+        <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">SEISA</name>
+        <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="secp2">
+    Rice is a member of the SEISA district of ICSA.  SEISA stands for
+    South-Eastern Inter-Collegiate Sailing Association.  SEISA is the
+    organization that the South-East colleges compete in.  The schools gather
+    to compete for all normal regattas.  One or two schools from SEISA will
+    qualify for the National competitions hosted by ICSA.
+  </para>
+        <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec3">
+
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">RUST: Rice University Sailing Team</name>
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="secp3">
+      RUST is Rice's competitive sailing team.  Rice is a member of
+      SEISA. This
+      district is made up of several schools, including UT, A&amp;M,
+      A&amp;M
+      Galveston, UNO, Tulane, Kansas, and UWF. The Rice Sailing Club is
+      open to all
+      members of the student community, including graduate
+      students. Beginner and expert sailors alike are encouraged to
+      practice with the team.  RUST is a small and easy-going club. There
+      are
+      no attendance requirements, and everyone who wants to sail can
+      sail. Members pay yearly dues to help cover expenses, but every
+      member not only gets to sail, but gets a sailing club T-shirt too!
+
+    </para>
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="secp3_beatles1">For the benefit of Mr. Kite, there
+      will be a show tonight on trampoline.  The Hendersons will
+      all be there, late Pablo Fanques Fair - what a scene.  Over
+      men and horses, hoops and garters, lastly through a hogshead
+      of real fire!  In this way Mr. K. will challenge the world!
+      The celebrated Mr. K. performs his feat on Saturday at
+      Bishopsgate.  The Hendersons will dance and sing as Mr. Kite
+      flys through the ring - don't be late.  Messrs. K and
+      H. assure the public their production will be second to
+      none.  And course Henry The Horse dances the waltz!</para>
+          <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="section_equation">
+            <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This equation has been thrown in as a child of section for styling purposes</name>
+
+            <m:math mode="inline">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:cos/>
+                  <m:apply>
+                    <m:times/>
+                    <m:cn>2</m:cn>
+
+                    <m:pi/>
+                    <m:ci>f</m:ci>
+                    <m:ci>t</m:ci>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:divide/>
+                  <m:apply>
+
+                    <m:plus/>
+                    <m:apply>
+                      <m:exp/>
+                      <m:apply>
+                        <m:times/>
+                        <m:imaginaryi/>
+                        <m:cn>2</m:cn>
+                        <m:pi/>
+
+                        <m:ci>f</m:ci>
+                        <m:ci>t</m:ci>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:exp/>
+                      <m:apply>
+                        <m:minus/>
+
+                        <m:apply>
+                          <m:times/>
+                          <m:imaginaryi/>
+                          <m:cn>2</m:cn>
+                          <m:pi/>
+                          <m:ci>f</m:ci>
+                          <m:ci>t</m:ci>
+
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                    <m:cn>2</m:cn>
+                  </m:apply>
+
+                </m:apply>
+              </m:apply>
+            </m:math>
+          </equation>
+        </section>
+        <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec3_2">
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Section Three Point Two</name>
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec3_2_p">Section 3.2</para>
+
+        </section>
+        <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec3_3">
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Section Three Point Three</name>
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec3_3_p">Section 3.3</para>
+          <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec4">
+            <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">four levels down</name>
+            <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec5">
+
+              <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">five levels down</name>
+              <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec6">
+                <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">six levels down</name>
+                <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec7">
+                  <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">seven levels down</name>
+                  <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec8">
+                    <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">eight levels down</name>
+
+                    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec9">
+                      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">nine levels down</name>
+                      <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec12">
+                        <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">how low can you go?</name>
+                        <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec13">
+                          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">as low as you want</name>
+                          <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sec14">
+
+                            <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">CNXML is limitless in it's powers</name>
+                            <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="bottom_section">You get the picture!</para>
+                          </section>
+                        </section>
+                      </section>
+                    </section>
+                  </section>
+                </section>
+
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="list">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">List</name>
+
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="apara">
+  Hello and welcome to my list of things to do.  The following list
+  is <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">within</emphasis> a paragraph, whereas the subsequent
+  ordered list is <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">preceded</emphasis> by a paragraph.
+  <list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="list1">
+          <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This is an item.  The length of this item has been
+      extended for quality assurance of its style upon wrapping, assuming it
+      extends for more than the width of the screen, which is
+      why it may appear that I am dragging this sentence out for a
+      long time..</item>
+          <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+      This is another item with a list nested inside of it.
+      <list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="list2">
+
+              <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">The next subitem contains a named equation.</item>
+              <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+                <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="eqn4_list">
+                  <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Euler's relation</name>
+                  <m:math mode="inline">
+                    <m:apply>
+                      <m:eq/>
+                      <m:apply>
+
+                        <m:sin/>
+                        <m:apply>
+                          <m:times/>
+                          <m:cn>2</m:cn>
+                          <m:pi/>
+                          <m:ci>f</m:ci>
+                          <m:ci>t</m:ci>
+
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:divide/>
+                        <m:apply>
+                          <m:minus/>
+                          <m:apply>
+                            <m:exp/>
+                            <m:apply>
+
+                              <m:times/>
+                              <m:imaginaryi/>
+                              <m:cn>2</m:cn>
+                              <m:pi/>
+                              <m:ci>f</m:ci>
+                              <m:ci>t</m:ci>
+                            </m:apply>
+
+                          </m:apply>
+                          <m:apply>
+                            <m:exp/>
+                            <m:apply>
+                              <m:minus/>
+                              <m:apply>
+                                <m:times/>
+                                <m:imaginaryi/>
+                                <m:cn>2</m:cn>
+
+                                <m:pi/>
+                                <m:ci>f</m:ci>
+                                <m:ci>t</m:ci>
+                              </m:apply>
+                            </m:apply>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+
+                          <m:times/>
+                          <m:cn>2</m:cn>
+                          <m:imaginaryi/>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:math>
+                </equation>
+
+              </item>
+            </list>
+          </item>
+        </list>
+                                This is not a new paragraph.
+
+                                This is also not a new paragraph.
+      </para>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="new">
+  This is a new paragraph.
+      </para>
+      <list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="list1b" type="enumerated"><name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"> Example Enumerated List </name><item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This is an enumerated list item not located within
+    paragraph tags.</item>
+        <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+    This is another item with a list nested inside of it.
+    <list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="list2b"><item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This is a subitem.  But the subitem is not enumerated.</item>
+            <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This is another subitem.</item>
+
+          </list>
+        </item>
+        <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"> Yet another item</item>
+      </list><list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="note_rule_def_list">
+        <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">A list of notes, definitions, and rules</name>
+        <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="warning"> Sulfuric and Hydrochloric Acid are <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">very
+        dangerous</emphasis>. Please handle with caution. </note>
+
+        </item>
+        <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="note"> Sulfuric and Hydrochloric Acid are <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">very
+        dangerous</emphasis>. Please handle with caution. </note>
+        </item>
+        <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <definition xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="note_list">
+            <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">note</term>
+
+            <meaning xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">A short letter.</meaning>
+            <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="noteex1_list"><para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="pn1_list">Bob, Your son called. -Mary</para></example>
+            <meaning xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">A different meaning for the term.</meaning>
+            <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="noteex2_list"><para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="pn2_list">A first example.</para></example>
+            <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="noteex3_list"><para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="pn3_list">A second example.</para></example>
+            <meaning xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+
+              <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="list_defintion_equation">
+                <m:math mode="inline">
+                  <m:apply>
+                    <m:eq/>
+                    <m:apply>
+                      <m:root/>
+                      <m:ci>t</m:ci>
+                    </m:apply>
+
+                    <m:apply>
+                      <m:sum/>
+                      <m:bvar><m:ci>n</m:ci></m:bvar>
+                      <m:lowlimit>
+                        <m:apply>
+                          <m:minus/>
+                          <m:infinity/>
+                        </m:apply>
+
+                      </m:lowlimit>
+                      <m:uplimit>
+                        <m:infinity/>
+                      </m:uplimit>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:power/>
+                          <m:apply>
+
+                            <m:minus/>
+                            <m:cn>1</m:cn>
+                          </m:apply>
+                          <m:ci>n</m:ci>
+                        </m:apply>
+                        <m:ci>A</m:ci>
+                        <m:apply>
+
+                          <m:ci type="fn">
+                            <m:msub>
+                              <m:mo>p</m:mo>
+                              <m:mrow>
+                                <m:mi>T</m:mi>
+                                <m:mo>/</m:mo>
+                                <m:mn>2</m:mn>
+
+                              </m:mrow>
+                            </m:msub>
+                          </m:ci>
+                          <m:apply>
+                            <m:minus/>
+                            <m:ci>t</m:ci>
+                            <m:apply>
+                              <m:times/>
+
+                              <m:ci>n</m:ci>
+                              <m:apply>
+                                <m:divide/>
+                                <m:ci>T</m:ci>
+                                <m:cn>2</m:cn>
+                              </m:apply>
+                            </m:apply>
+
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:math>
+              </equation>
+            </meaning>
+          </definition>
+
+        </item>
+        <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <rule xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="theorem" id="rulephth_list">
+            <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Pythagorean Theorem</name>
+            <statement xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+              <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="st1_list">On a right triangle, the sum of the
+    squares of the sides equals the square of the hypotenus.
+        </para>
+            </statement>
+            <proof xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+
+              <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">proof name</name>
+              <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="pr1_list">
+    Your favorite proof goes here.
+        </para>
+<example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="ajsidofjaioef">
+<para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="ajsdfiajsfdiojasdof">
+  This example is a child of the proof.  The next one is not.
+</para>
+</example>
+            </proof>
+            <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="phthex1_list">
+
+              <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="phthexp1_list">
+    Take a right triangle whose sides are of length 3, 4, and 5.
+    In this case the sum of the square of the two shorter sides is
+    9+16=25.  The square of the hypotenus is 25.  So the theorem holds.
+        </para>
+            </example>
+          </rule>
+        </item>
+      </list><para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-822">This paragraph contains an inline list, i.e. a list with <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">type="inline</code>: <list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="ajsklfj" type="inline"><item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This item has no name</item><item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Name</name>This is item has a name</item></list>.  Next is an inline list with a name<list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="asdjfajkls3344df" type="inline"><name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">List name</name><item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">First item name</name>First item text</item><item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">2nd item text</item></list> blah blah blah.  This paragraph also contains a named-item list, i.e. a list with <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">type="named-item"</code>: <list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="ajfiow" type="named-item"><name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">name of list</name><item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This item has no name, even though it's part of a named-item list fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff</item><item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">namenamename</name>This item as a longish name fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff</item><item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">n</name>This item has a short name fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff fluff</item></list></para>
+
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxnlink">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">CNXN and Link</name>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxn_p">If you want to learn more about things in general, you can look
+  at other pages in CNX world.  To learn more about CNXML, go to
+  the <link xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" src="http://cnx.org/aboutus/technology/cnxml/0.5/spec/">CNXML 0.5
+    spec</link>.  Then you can write things like
+  <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;cnxn&gt;</code> and <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;link&gt;</code> in CNXML.
+  You will also be able to make
+  <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" strength="9" document="m9000" target="cnln">CNXN's</cnxn>
+
+  between things you wrote and things other people have written.
+  For example, to learn more about Rice sailing, you can look right here at the
+  <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" strength="3" target="sec1">sailing section</cnxn> in this module.  Or you
+  could link to something even less relevant, say
+  <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" strength="1" document="m0520">digital communication
+    receivers</cnxn>.  To go to a topic which is a bit more relavant to
+  writing <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline"> &lt;cnxn&gt; </code> tags, you could visit the
+  module about <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" strength="7" document="m9004">using emacs</cnxn>. If you
+  have more questions about Connexions basics,
+  you could look at the <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" strength="4" document="m9001"> FAQ </cnxn>.
+  So if you want to learn more about the world in which you live,
+  Connexions is the
+  place to be.
+      </para><list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-980" type="bulleted"><name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">empty cnxn testing</name><item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+
+To another module: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" strength="0" document="m0003"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a subfigure: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="lena_as_signal_vertical"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a figure: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="ascii"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a paragraph: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="opening_paragraph"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To an equation: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="content_equation"/>
+
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a note with no type attribute: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_null_note"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a note with type attribute equal to null string: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_null_string_note"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a note with a type attribute other than "note": <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_not_note"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a footnote: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_footnote"/>
+</item>
+
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a rule: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="parseval"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To an emphasis: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_emphasis"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a definition: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="asjf903"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To an exercise outside of an example: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="exercise_equation"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+
+To a problem outside an example: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_problem"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a solution outside an example: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_single_solution"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a solution (one of many) outside an example: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_2nd_solution"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To an exercise inside an example: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="exercise_in_example_2"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a problem inside an example: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_problem_in_example"/>
+
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a solution inside an example: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_single_solution_in_example"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a solution (one of many) inside an example: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxn_to_2nd_solution_in_example"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a glossary: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="gloss" id="cnxncnxn"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a cnxn: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxncnxn"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a table caption: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="tablecaption"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To a figure caption: <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="figurecaption"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To an example with no numbering <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="phthex1_example"/>
+</item>
+<item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+To an example after an example with no numbering <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="element-2839"/>
+</item></list>
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example">
+
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Example</name>
+      <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="exp01">
+        <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="p02">
+    As an example of signal complexity, we can express the pulse
+
+    <m:math mode="inline">
+            <m:apply>
+              <m:ci type="fn">
+                <m:msub>
+                  <m:mo>p</m:mo>
+
+                  <m:mrow>
+                    <m:mi>&#916;</m:mi>
+                  </m:mrow>
+                </m:msub>
+              </m:ci>
+              <m:ci>t</m:ci>
+            </m:apply>
+          </m:math>
+    as a sum of delayed unit steps.
+  </para>
+
+        <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="eqn01">
+          <m:math mode="inline">
+            <m:apply>
+              <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mo>p</m:mo>
+
+                    <m:mrow>
+                      <m:mi>&#916;</m:mi>
+                    </m:mrow>
+                  </m:msub>
+                </m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+              <m:apply>
+
+                <m:minus/>
+                <m:apply>
+                  <m:ci type="fn">u</m:ci>
+                  <m:ci>t</m:ci>
+                </m:apply>
+                <m:apply>
+                  <m:ci type="fn">u</m:ci>
+
+                  <m:apply>
+                    <m:minus/>
+                    <m:ci>t</m:ci>
+                    <m:ci>&#916;</m:ci>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:apply>
+
+          </m:math>
+        </equation>
+        <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="p03">
+    Thus, the pulse is a more complex signal than the step. Be that
+    as it may, the pulse is very useful to us.
+  </para>
+      </example>
+      <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_pain">
+        <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">CNXML can be a pain</name>
+        <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_pain_p">This sentence, although it is very
+    <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">unimportant</emphasis> and
+    <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">irrelevant</emphasis>, contains emphasis within the
+    <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;example&gt;</code> tag.  For an example of
+    <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;cite&gt;</code> within
+    <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;example&gt;</code>, see <cite xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Things That
+      Are a Pain to Style in CNXML</cite> by Max Starkenburg.  For an
+    example of <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;emphasis&gt;</code> within
+    <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;cite&gt;</code> within
+    <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;example&gt;</code>, please see <cite xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Things
+      That Are a <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Pain in the Butt</emphasis> to Style in
+      CNXML</cite>, also by Max Starkenburg.  This sentence contains
+    <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline"><emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxn_to_emphasis">emphasized codeline</emphasis>code>
+
+    within an example.  This sentence contains a
+    <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="cnxnlink" strength="5">cnxn</cnxn> within an example.  This
+    sentence contains a <link xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" src="http://www.link.com">link</link>.  This
+    sentence contains a <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">term</term>.  This sentence contains a
+    <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">codeline term</code></term>.
+  </para>
+        <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_pain_p2">This paragraph has just been thrown in to
+    ensure that it is styled correctly.  It has nothing to say, but is long
+    anwyay, just to make sure that it continues to the next line.
+  </para>
+      </example>
+
+      <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_codeblock">
+        <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="block" id="html_beginning">
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;Codeblock within the example tag&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body bgcolor="#ffffff" link="#990000"&gt;
+  </code>
+      </example>
+      <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_list">
+        <list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="list_in_example" type="enumerated">
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Example List in Example</name>
+          <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This is an enumerated list item.</item>
+
+          <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This is another item with a list inside of it.
+      <list xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_sublist" type="bulleted">
+              <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This is a bulleted list item</item>
+              <item xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This is another bulleted list item</item>
+            </list>
+          </item>
+        </list>
+      </example>
+
+      <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_figure"><figure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="figure_in_example">
+          <media xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="image/png" src="lena.png"/>
+          <caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="figurecaption">This figure is inside of the <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;example&gt;</code> tag.</caption>
+        </figure>
+      </example>
+      <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_table"><table xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="table1_example" frame="all">
+
+          <tgroup xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" cols="4">
+            <thead xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+              <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Transform</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Time Domain</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Frequency Domain</entry>
+
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Convolution</entry>
+              </row>
+            </thead>
+            <tbody xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+              <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Continuous-Time Fourier Series</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">
+                  <m:math display="inline">
+
+                    <m:apply>
+                      <m:ci>
+                        <m:msup>
+                          <m:mi>L</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:ci>
+                      <m:interval closure="closed-open">
+
+                        <m:cn>0</m:cn>
+                        <m:ci>T</m:ci>
+                      </m:interval>
+                    </m:apply>
+                  </m:math>
+                </entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">
+                  <m:math>
+
+                    <m:apply>
+                      <m:ci>
+                        <m:msup>
+                          <m:mi>l</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:ci>
+                      <m:integers/>
+
+                    </m:apply>
+                  </m:math>
+                </entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Continuous-Time Circular</entry>
+              </row>
+              <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Continuous-Time Fourier Transform</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">
+
+                  <m:math>
+                    <m:apply>
+                      <m:ci>
+                        <m:msup>
+                          <m:mi>L</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:ci>
+
+                      <m:reals/>
+                    </m:apply>
+                  </m:math>
+                </entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">
+                  <m:math>
+                    <m:apply>
+                      <m:ci>
+                        <m:msup>
+
+                          <m:mi>L</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:ci>
+                      <m:reals/>
+                    </m:apply>
+                  </m:math>
+                </entry>
+
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Continuous-Time Linear</entry>
+              </row>
+              <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Discrete-Time Fourier Transform</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">
+                  <m:math>
+                    <m:apply>
+                      <m:ci>
+
+                        <m:msup>
+                          <m:mi>l</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                      </m:ci>
+                      <m:integers/>
+                    </m:apply>
+                  </m:math>
+
+                </entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">
+                  <m:math>
+                    <m:apply>
+                      <m:ci>
+                        <m:msup>
+                          <m:mi>L</m:mi>
+                          <m:mn>2</m:mn>
+
+                        </m:msup>
+                      </m:ci>
+                      <m:interval closure="closed-open">
+                        <m:cn>0</m:cn>
+                        <m:apply>
+                          <m:times/>
+                          <m:cn>2</m:cn>
+                          <m:pi/>
+
+                        </m:apply>
+                      </m:interval>
+                    </m:apply>
+                  </m:math>
+                </entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Discrete-Time Linear</entry>
+              </row>
+              <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Discrete Fourier Transform</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">
+                  <m:math>
+                    <m:apply>
+                      <m:ci>
+                        <m:msup>
+                          <m:mi>l</m:mi>
+                          <m:mn>2</m:mn>
+
+                        </m:msup>
+                      </m:ci>
+                      <m:interval closure="closed-closed">
+                        <m:cn>0</m:cn>
+                        <m:apply>
+                          <m:minus/>
+                          <m:ci>N</m:ci>
+                          <m:cn>1</m:cn>
+
+                        </m:apply>
+                      </m:interval>
+                    </m:apply>
+                  </m:math>
+                </entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">
+                  <m:math>
+                    <m:apply>
+                      <m:ci>
+
+                        <m:msup>
+                          <m:mi>l</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msup></m:ci>
+                      <m:interval closure="closed-closed">
+                        <m:cn>0</m:cn>
+                        <m:apply>
+
+                          <m:minus/>
+                          <m:ci>N</m:ci>
+                          <m:cn>1</m:cn>
+                        </m:apply>
+                      </m:interval>
+                    </m:apply>
+                  </m:math>
+                </entry>
+
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Discrete-Time Circular</entry>
+              </row>
+            </tbody>
+          </tgroup>
+<caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="tablecaption">Table of Fourier Representations</caption>
+        </table>
+      </example>
+      <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_definition">
+
+        <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_definition_para">
+          <definition xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="note_example">
+            <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">note</term>
+            <meaning xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">A short letter.</meaning>
+            <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="noteex1_example">
+              <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="pn1_example">Bob, Your son called. -Mary</para>
+            </example>
+
+          </definition>
+        </para>
+        <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_rule_para">
+          <rule xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="theorem" id="rulephth_example">
+            <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Pythagorean Theorem</name>
+            <statement xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+              <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="st1_example">On a right triangle, the sum of the
+    squares of the sides equals the square of the hypotenus.
+        </para>
+            </statement>
+
+            <proof xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+              <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">proof name</name>
+              <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="pr1_example">
+    Your favorite proof goes here.
+        </para>
+            </proof>
+            <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="phthex1_example">
+              <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="phthexp1_example">
+    Take a right triangle whose sides are of length 3, 4, and 5.
+    In this case the sum of the square of the two shorter sides is
+    9+16=25.  The square of the hypotenus is 25.  So the theorem holds.
+        </para>
+
+            </example>
+          </rule>
+        </para>
+        <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="example_notes">
+          <note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="warning"> Sulfuric and Hydrochloric Acid are <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">very
+        dangerous</emphasis>. Please hande with caution. </note>
+          <note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="note"> Sulfuric and Hydrochloric Acid are <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">very
+        dangerous</emphasis>. Please hande with caution. </note>
+
+        </para>
+      </example>
+    </section>
+
+
+<definition xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="asjf903"><term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">23h8902</term>
+<meaning xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">aj2390tj</meaning>
+</definition>
+<rule xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="of thumb" id="fj920qg3">
+<statement xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+<para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="j2930fj29g">jaf3j9w0gea ja jdlfasdnfl</para></statement>
+
+</rule>
+
+
+<section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="exercise">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Exercise</name>
+      <exercise xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="swsuper">
+        <problem xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="p04">
+      Express a square wave having period
+
+      <m:math mode="inline">
+              <m:ci>T</m:ci>
+
+            </m:math>
+      and amplitude
+
+      <m:math mode="inline">
+              <m:ci>A</m:ci>
+            </m:math>
+
+      as a superposition of delayed and amplitude-scaled pulses.
+    </para>
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="problem_extra">
+      This is an extra paragraph thrown in for styling purposes.
+    </para>
+        </problem>
+
+        <solution xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxn_to_single_solution">
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="solution_p">This is a paragraph that begins a
+      solution.  The equation is nested in the paragraph.
+      <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="solution">
+              <m:math mode="inline">
+                <m:apply>
+                  m:eq/>
+                  <m:apply>
+                    <m:root/>
+                    <m:ci>t</m:ci>
+
+                  </m:apply>
+                  <m:apply>
+                    <m:sum/>
+                    <m:bvar><m:ci>n</m:ci></m:bvar>
+                    <m:lowlimit>
+                      <m:apply>
+                        <m:minus/>
+                        <m:infinity/>
+
+                      </m:apply>
+                    </m:lowlimit>
+                    <m:uplimit>
+                      <m:infinity/>
+                    </m:uplimit>
+                    <m:apply>
+                      <m:times/>
+                      <m:apply>
+                        <m:power/>
+
+                        <m:apply>
+                          <m:minus/>
+                          <m:cn>1</m:cn>
+                        </m:apply>
+                        <m:ci>n</m:ci>
+                      </m:apply>
+                      <m:ci>A</m:ci>
+
+                      <m:apply>
+                        <m:ci type="fn">
+                          <m:msub>
+                            <m:mo>p</m:mo>
+                            <m:mrow>
+                              <m:mi>T</m:mi>
+                              <m:mo>/</m:mo>
+
+                              <m:mn>2</m:mn>
+                            </m:mrow>
+                          </m:msub>
+                        </m:ci>
+                        <m:apply>
+                          <m:minus/>
+                          <m:ci>t</m:ci>
+                          <m:apply>
+
+                            <m:times/>
+                            <m:ci>n</m:ci>
+                            <m:apply>
+                              <m:divide/>
+                              <m:ci>T</m:ci>
+                              <m:cn>2</m:cn>
+                            </m:apply>
+
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:math>
+            </equation>
+          </para>
+
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="solution_extra">
+      This is an extra paragraph thrown in for styling purposes.
+    </para>
+        </solution>
+      </exercise>
+      <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-729"><exercise xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="exercise_in_example_1">
+<problem xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+  <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-183">
+    Problem Text Here
+  </para>
+
+</problem>
+
+<solution xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxn_to_single_solution_in_example">
+  <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-172">
+    Solution Text Here
+  </para>
+</solution>
+</exercise>
+
+<example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-2839">
+  <exercise xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-2934">
+    <problem xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-5782">
+        Exercise/problem nested inside example nested inside example.
+      </para>
+    </problem>
+    <solution xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-3828">
+        Solution nested inside example nested inside example.
+      </para>
+    </solution>
+  </exercise>
+</example>
+<section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-349">
+<name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">section for testing purposes only</name>
+<exercise xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-426"><problem xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+  <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-185">
+    Problem Text Here
+  </para>
+</problem>
+<solution xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+  <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-230">
+    Solution Text Here
+  </para>
+</solution>
+</exercise>
+</section>
+
+<exercise xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="exercise_in_example_2"><problem xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxn_to_problem_in_example">
+  <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-184">
+    Problem Text Here
+  </para>
+</problem>
+
+<solution xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+  <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-173">
+    Solution 1 Text Here
+  </para>
+</solution>
+
+<solution xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxn_to_2nd_solution_in_example">
+  <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-174">
+    Solution 2 Text Here
+  </para>
+</solution>
+</exercise>
+
+</example><exercise xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="exercise_equation"><problem xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxn_to_problem">
+          <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="problem_equation">
+            <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This equation has been thrown in as a child of problem for styling purposes</name>
+            <m:math mode="inline">
+
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:cos/>
+                  <m:apply>
+                    <m:times/>
+                    <m:cn>2</m:cn>
+                    <m:pi/>
+
+                    <m:ci>f</m:ci>
+                    <m:ci>t</m:ci>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:divide/>
+                  <m:apply>
+                    <m:plus/>
+
+                    <m:apply>
+                      <m:exp/>
+                      <m:apply>
+                        <m:times/>
+                        <m:imaginaryi/>
+                        <m:cn>2</m:cn>
+                        <m:pi/>
+                        <m:ci>f</m:ci>
+
+                        <m:ci>t</m:ci>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:exp/>
+                      <m:apply>
+                        <m:minus/>
+                        <m:apply>
+
+                          <m:times/>
+                          <m:imaginaryi/>
+                          <m:cn>2</m:cn>
+                          <m:pi/>
+                          <m:ci>f</m:ci>
+                          <m:ci>t</m:ci>
+                        </m:apply>
+
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                    <m:cn>2</m:cn>
+                  </m:apply>
+                </m:apply>
+
+              </m:apply>
+            </m:math>
+          </equation>
+        </problem>
+        <solution xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="exercise_solution_para">The solution is to use Mozilla, and not IE, nor Netscape.  The latter two browsers have serious CSS bugs.  For an equation inside a solution, see the above exercise.</para>
+        </solution>
+<solution xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxn_to_2nd_solution">
+  <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="exercise_solution_para_2">Note the ability to have more than one solution per exercise.</para>
+
+        </solution>
+      </exercise><exercise xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-316"><problem xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+  <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="element-792">
+    This exercise contains a problem but no solution
+  </para>
+</problem>
+</exercise>
+<example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="following_example">
+  <exercise xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="following_example_exercise">
+    <problem xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="asdf123">Another exercise in an an example following the other ones</para>
+
+    </problem>
+    <solution xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="asdjfaie0">Solution text</para>
+    </solution>
+  </exercise>
+</example>
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="code">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Codeline and Codeblock</name>
+
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="p05">Try running this in MATLAB.</para>
+      <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="block">
+        <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">for</emphasis> n=1:1000
+  y(n) = sum(a.*y(n-1:-1:n-p)) + sum(b.*x(n:-1:n-q));
+  end
+      </code>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="p06">
+  The <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">forcode> command repeats its contents while
+  incrementing a counter.
+      </para>
+
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="code01">
+        <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;!-- some codeline and codeblock are
+    <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">emphasized</emphasis> more than others --&gt;</code>
+      </para>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="code02">
+        <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;!--
+    codeline can be <link xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" src="http://dir.yahoo.com/Computers_and_Internet/Internet/World_Wide_Web/Searching_the_Web/Indices_to_Web_Documents/Random_Links/">linked</link> and <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" document="m9000" target="cnln" strength="9">cnxn'ed</cnxn> too --&gt;</code>
+
+      </para>
+      <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="block">
+  codeblock
+  can be
+  <link xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" src="http://dir.yahoo.com/Computers_and_Internet/Internet/World_Wide_Web/Searching_the_Web/Indices_to_Web_Documents/Random_Links/">linked</link> and
+  <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" document="m9000" target="cnln" strength="9">cnxn'ed</cnxn>
+  as well
+      </code>
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="definition">
+
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Definition, Term, Meaning, and Example</name>
+      <definition xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="note">
+        <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">note</term>
+        <meaning xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">A short letter.</meaning>
+        <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="noteex1"><para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="pn1">Bob, Your son called. -Mary</para></example>
+        <meaning xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">A different meaning for the term.</meaning>
+
+        <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="noteex2"><para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="pn2">A first example.</para></example>
+        <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="noteex3"><para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="pn3">A second example.</para></example>
+      </definition>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="pardef1">
+  I can also define a new <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">term</term> in the middle of a
+  sentence.  A term is a new word that is being defined for the
+  first time.
+      </para>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="para_definition">The following definition will be the
+  child of a <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">&lt;para&gt;</code> tag to ensure that it
+  is styled well.</para>
+
+      <definition xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="perl_definition">
+        <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">#!/usr/local/bin/perl/</code>
+        </term>
+        <meaning xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">The first line of every Perl program</meaning>
+        <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="perl_example">
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="perl_para">This program will produce a 2-column
+      listing of a file.
+    </para>
+
+          <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="block" id="perl_codeblock">
+      #!/usr/local/bin/perl/
+      while( $1 = &gt;STDIN&gt; ) {
+      chop( $1 );
+      if( $1 =~ s/^Desig:\s+// ) {
+      $desig = $1;
+      next;
+      }
+      if( $1 =~ s/^Area:\s+// ) {
+      $area = $1;
+      printf( "%-12s %\n", $desig, $area );
+      }
+      }
+    </code>
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="half_half_term">
+      This sentence contains a term which is <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">half regular
+        <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">half codeline</code></term>.
+    </para>
+        </example>
+
+      </definition>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="perl_inline_p">Feast your eyes on this:
+  <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">#!/usr/local/bin/perl/</code></term> is a term
+  smack dab in the middle of a sentence!  Amazing!  This example,
+  <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">#!/usr<emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">/local/</emphasis>bin/perl/</code></term>
+  , is a codeline term with emphasis on
+  <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline"><emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">/local/</emphasis></code>.  The next example is a
+  <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">codeline term with a <link xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" src="http://www.link.com">link</link>
+
+      and <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" document="#" strength="2">cnxn</cnxn></code></term>.
+      </para>
+      <definition xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="definition_equation">
+        <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">equation</term>
+        <meaning xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="meaning_equation">
+            <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This equation has been thrown in as a child of meaning for styling purposes</name>
+
+            <m:math mode="inline">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:cos/>
+                  <m:apply>
+                    <m:times/>
+                    <m:cn>2</m:cn>
+
+                    <m:pi/>
+                    <m:ci>f</m:ci>
+                    <m:ci>t</m:ci>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:divide/>
+                  <m:apply>
+
+                    <m:plus/>
+                    <m:apply>
+                      <m:exp/>
+                      <m:apply>
+                        <m:times/>
+                        <m:imaginaryi/>
+                        <m:cn>2</m:cn>
+                        <m:pi/>
+
+                        <m:ci>f</m:ci>
+                        <m:ci>t</m:ci>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:exp/>
+                      <m:apply>
+                        <m:minus/>
+
+                        <m:apply>
+                          <m:times/>
+                          <m:imaginaryi/>
+                          <m:cn>2</m:cn>
+                          <m:pi/>
+                          <m:ci>f</m:ci>
+                          <m:ci>t</m:ci>
+
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                    <m:cn>2</m:cn>
+                  </m:apply>
+
+                </m:apply>
+              </m:apply>
+            </m:math>
+          </equation>
+        </meaning>
+      </definition>
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="notes">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"> Note </name>
+
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="note1">Chemistry lab was always a lot of fun.  We played
+  with a lot of chemicals such as Sulfuric and Hydrochloric acid.
+  <note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="warning" id="cnxn_to_not_note"> Sulfuric and Hydrochloric Acid are <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">very
+      dangerous</emphasis>. Please handle with caution. </note>
+      </para>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="note2">Chemistry lab was always a lot of fun. We played
+  with a lot of chemicals such as Sulfuri and Hydrochloric acid.
+<note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="" id="cnxn_to_null_string_note"> This note does <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">not</emphasis> have a string in its type attribute.
+    Please handle with caution. </note>
+
+<note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxn_to_null_note"> This note does <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">not</emphasis> have a type attribute.
+    Please handle with caution. </note>
+      </para>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="note3">Chemistry lab was always a lot of fun. We played
+  with a lot of chemicals such as Sulfuric and Hydrocholic acid.
+  <note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="footnote"> Sulfuric and Hydrochloric Acid are <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">very
+      dangerous</emphasis>. Please handle with caution. </note>   Adding another footnote here. <note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="footnote" id="cnxn_to_footnote">This note was added to test styling.</note>
+
+      </para>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="note4">Chemistry lab was always a lot of fun. We played
+  with a lot of chemicals such as Sulfuric and Hydrocholic acid.
+  <note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="FOOTNOTE"> Sulfuric and Hydrochloric Acid are <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">very
+      dangerous</emphasis>. Please handle with caution. Also handle this note with caution, because it contains the attribute <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">type="FOOTNOTE"</code>, not <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">type="footnote"</code>, and will thus be styled differently.</note>
+      </para>
+    </section>
+
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="rule">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Rule</name>
+      <rule xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="theorem" id="rulephth">
+        <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Pythagorean Theorem</name>
+        <statement xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="st1">On a right triangle, the sum of the
+      squares of the sides equals the square of the hypotenus.
+    </para>
+        </statement>
+
+        <proof xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This proof was thrown into to have a child of equation for styling purposes</name>
+          <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="proof_equation">
+            <m:math mode="inline">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:cos/>
+
+                  <m:apply>
+                    <m:times/>
+                    <m:cn>2</m:cn>
+                    <m:pi/>
+                    <m:ci>f</m:ci>
+                    <m:ci>t</m:ci>
+                  </m:apply>
+
+                </m:apply>
+                <m:apply>
+                  <m:divide/>
+                  <m:apply>
+                    <m:plus/>
+                    <m:apply>
+                      <m:exp/>
+                      <m:apply>
+                        <m:times/>
+
+                        <m:imaginaryi/>
+                        <m:cn>2</m:cn>
+                        <m:pi/>
+                        <m:ci>f</m:ci>
+                        <m:ci>t</m:ci>
+                      </m:apply>
+                    </m:apply>
+
+                    <m:apply>
+                      <m:exp/>
+                      <m:apply>
+                        <m:minus/>
+                        <m:apply>
+                          <m:times/>
+                          <m:imaginaryi/>
+                          <m:cn>2</m:cn>
+
+                          <m:pi/>
+                          <m:ci>f</m:ci>
+                          <m:ci>t</m:ci>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+
+                    <m:times/>
+                    <m:cn>2</m:cn>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:math>
+          </equation>
+        </proof>
+
+        <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="phthex1">
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="phthexp1">
+      Take a right triangle whose sides are of length 3, 4, and 5.
+      In this case the sum of the square of the two shorter sides is
+      9+16=25.  The square of the hypotenus is 25.  So the theorem holds.
+    </para>
+        </example>
+      </rule>
+      <rule xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="property" id="rule1">
+        <statement xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="rule1para1">
+
+      If
+
+      <m:math display="inline">
+              <m:apply>
+                <m:ci type="fn">s</m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+            </m:math>
+
+      is real,
+
+      <m:math display="inline">
+
+              <m:apply><m:eq/>
+                <m:ci><m:msub>
+                    <m:mi>c</m:mi>
+                    <m:mrow>
+                      <m:mo>&#8722;</m:mo>
+                      <m:mi>k</m:mi>
+                    </m:mrow>
+
+                  </m:msub></m:ci>
+                <m:ci><m:msubsup>
+                    <m:mi>c</m:mi>
+                    <m:mi>k</m:mi>
+                    <m:mo>*</m:mo>
+                  </m:msubsup></m:ci>
+              </m:apply>
+
+            </m:math>
+          </para>
+          <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="rule1para2">
+      This result follows from the integral that calculates the
+
+      <m:math display="inline">
+              <m:ci>
+                <m:msub>
+                  <m:mi>c</m:mi>
+                  <m:mi>k</m:mi>
+
+                </m:msub>
+              </m:ci>
+            </m:math>
+
+      from the signal. Furthermore, this result means that
+
+      <m:math display="inline">
+              <m:apply><m:eq/>
+                <m:apply>
+                  <m:ci type="fn">Re</m:ci>
+                  <m:ci>
+
+                    <m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                  </m:ci>
+                </m:apply>
+                <m:apply><m:ci type="fn">Re</m:ci>
+
+                  <m:ci><m:msub>
+                      <m:mi>c</m:mi>
+                      <m:mrow>
+                        <m:mo>&#8722;</m:mo>
+                        <m:mi>k</m:mi>
+                      </m:mrow>
+                    </m:msub></m:ci>
+
+                </m:apply>
+              </m:apply>
+            </m:math>
+
+      : The real part of the Fourier coefficients for real-valued signals is even. Similarly,
+
+      <m:math display="inline">
+              <m:apply><m:eq/>
+                <m:apply><m:ci type="fn">Im</m:ci>
+                  <m:ci><m:msub>
+                      <m:mi>c</m:mi>
+
+                      <m:mi>k</m:mi>
+                    </m:msub></m:ci>
+                </m:apply>
+                <m:apply><m:minus/>
+                  <m:apply><m:ci type="fn">Im</m:ci>
+                    <m:ci><m:msub>
+                        <m:mi>c</m:mi>
+
+                        <m:mrow>
+                          <m:mo>&#8722;</m:mo>
+                          <m:mi>k</m:mi>
+                        </m:mrow>
+                      </m:msub></m:ci>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+
+            </m:math>
+
+      : The imaginary parts of the Fourier coefficients have odd symmetry. Consequently,
+      if you are given the Fourier coefficients for positive indices and zero and are
+      told the signal is real-valued, you can find the negative-indexed coefficients,
+      hence the entire spectrum. This kind of symmetry,
+
+      <m:math display="inline">
+              <m:apply><m:eq/>
+                <m:ci><m:msub>
+                    <m:mi>c</m:mi>
+                    <m:mrow>
+                      <m:mo>&#8722;</m:mo>
+
+                      <m:mi>k</m:mi>
+                    </m:mrow>
+                  </m:msub></m:ci>
+                <m:ci><m:msubsup>
+                    <m:mi>c</m:mi>
+                    <m:mi>k</m:mi>
+                    <m:mo>*</m:mo>
+
+                  </m:msubsup></m:ci>
+              </m:apply>
+            </m:math>
+
+      , is known as <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">conjugate symmetry</emphasis>. We can phrase the property concisely by
+      saying:
+
+      <rule xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="property" id="conjugate">
+              <statement xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+                <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="crulepara1">
+      Real-valued periodic signals have a conjugate-symmetric spectrum.
+    </para>
+
+              </statement>
+            </rule>
+          </para>
+        </statement>
+      </rule>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="para3">
+  The Fourier series obeys:
+  <rule xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="theorem" id="parseval">
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Parseval's Theorem</name>
+
+          <statement xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+            <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="parsevalpara1">
+        Power calculated in the time domain
+        equals the power calculated in the frequency domain.
+      </para>
+            <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="parsevalpara2">
+              <equation xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="parsevaleqn">
+                <m:math display="block">
+                  <m:apply>
+                    <m:eq/>
+
+                    <m:apply>
+                      <m:times/>
+                      <m:apply>
+                        <m:divide/>
+                        <m:cn>1</m:cn>
+                        <m:ci>T</m:ci>
+                      </m:apply>
+                      <m:apply>
+
+                        <m:int/>
+                        <m:bvar><m:ci>t</m:ci></m:bvar>
+                        <m:lowlimit><m:cn>0</m:cn></m:lowlimit>
+                        <m:uplimit><m:ci>T</m:ci></m:uplimit>
+                        <m:apply><m:ci type="fn">
+                            <m:msup>
+                              <m:mi>s</m:mi>
+
+                              <m:mn>2</m:mn>
+                            </m:msup></m:ci>
+                          <m:ci>t</m:ci>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply><m:sum/>
+                      <m:bvar><m:ci>k</m:ci></m:bvar>
+
+                      <m:lowlimit><m:apply><m:minus/>
+                          <m:infinity/>
+                        </m:apply></m:lowlimit>
+                      <m:uplimit><m:infinity/></m:uplimit>
+                      <m:apply>
+                        <m:power/>
+                        <m:apply>
+                          <m:abs/>
+                          <m:ci>m:msub>
+
+                              <m:mi>c</m:mi>
+                              <m:mi>k</m:mi>
+                            </m:msub></m:ci>
+                        </m:apply>
+                        <m:degree><m:cn>2</m:cn></m:degree>
+                      </m:apply>
+                    </m:apply>
+
+                  </m:apply>
+                </m:math>
+              </equation>
+
+        This result is a (simpler) re-expression of how to calculate a signal's power than with the
+        <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="power" document="m0062" strength="6">
+    real-valued Fourier series expression for power
+        </cnxn>.
+      </para>
+          </statement>
+        </rule>
+
+      </para>
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cite">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Cite</name>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="parcite1">
+  Useful information about the color blue can be found in
+  <cite xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">The Big Book of the Color Blue</cite>.
+      </para>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="parcite2">
+
+  Emphatic information about emphasizing can be found in <cite xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">The
+    <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Gigantic</emphasis> Book of Emphasis</cite>.
+      </para>
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="figure">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"> Figures </name>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="parafigure">
+
+        Here is an example of a figure with a large table inside
+        it.  For exhaustive examples of figures, subfigures, and captions in many shapes, sizes, and combinations, see <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" document="m10221" strength="8"/>.  Currently, figures cannot be placed in paragraph tags.
+      </para>
+      <figure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="ascii" orient="horizontal">
+        <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Ascii table</name>
+        <table xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="table_ascii" frame="all">
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Budget - Comparison by year</name>
+          <tgroup xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" cols="4" align="left" colsep="1" rowsep="1">
+            <colspec xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" colnum="2" colname="c2"/>
+
+            <colspec xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" colnum="4" colname="c4"/>
+            <tbody xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" valign="top">
+              <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Income</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">12,293</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">12,398</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">14,298</entry>
+
+              </row>
+              <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Expenditure</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">293</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">398</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">298</entry>
+              </row>
+
+              <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Surplus</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">12000</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">12000</entry>
+                <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">14000</entry>
+              </row>
+            </tbody>
+
+          </tgroup>
+        </table>
+        <caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+    And here we can add more information about the table in a
+    caption!
+  </caption>
+      </figure>
+      <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="subfigure">
+        <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Subfigures</name>
+        <figure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="lena" orient="horizontal">
+
+          <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">The Subsequent Figure Does Not Have a Name</name>
+          <subfigure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="sublena">
+            <media xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="image/png" src="lena.png"/>
+            <caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Lena</caption>
+          </subfigure>
+          <subfigure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+            <media xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="image/png" src="lenamesh.png"/>
+            <caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Lena as a signal</caption>
+
+          </subfigure>
+          <subfigure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+            <media xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="image/png" src="lena.png"/>
+            <caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Lena again</caption>
+          </subfigure>
+          <caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+      On the left and right is the <link xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" src="http://www.cs.cmu.edu/~chuck/lennapg/editor.html">classic "Lena" image</link>,
+      which is used ubiquitously as a test image.  It contains
+      straight and curved lines, complicated texture, and a face. In
+      the middle is a perspective display of the Lena image as a
+      signal: a function of two <cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" strength="2" target="rulephth">spatial variables</cnxn>. The colors merely
+      help show what signal values are about the same size. In this
+      image, signal values range between 0 and 255; why is that?
+    </caption>
+
+        </figure>
+        <figure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="lena2" orient="vertical">
+          <subfigure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+            <media xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="image/png" src="lena.png"/>
+            <caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Lena</caption>
+          </subfigure>
+          <subfigure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="lena_as_signal_vertical">
+            <media xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="image/png" src="lenamesh.png">
+
+              <param name="height" value="145"/>
+              <param name="width" value="180"/>
+            </media>
+            <caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Lena as a signal</caption>
+          </subfigure>
+          <caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+      This example is the same as the last, except that
+      <code xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">orient='vertical'</code>.  So, the subfigures
+      should be on top of each other.
+    </caption>
+
+        </figure>
+      </section>
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="table">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Tables</name>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="tab">
+  Here's is a very simple example of a table, similiar to ones
+  seen previously in this module.
+      </para>
+      <table xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" frame="all" id="budgettable1">
+
+        <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Budget - Comparison by year</name>
+        <tgroup xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" cols="4" align="left" colsep="1" rowsep="1">
+          <colspec xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" colnum="2" colname="c2"/>
+          <colspec xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" colnum="4" colname="c4"/>
+          <thead xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" valign="top">
+            <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" morerows="1" align="center">Item</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" namest="c2" nameend="c4" align="center">Year</entry>
+
+            </row>
+            <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">1998</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">1999</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" align="center">2000</entry>
+            </row>
+          </thead>
+
+          <tbody xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" valign="top">
+            <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Income</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">12,293</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">12,398</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">14,298</entry>
+            </row>
+
+            <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Expenditure</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">293</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">398</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">298</entry>
+            </row>
+            <row xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Surplus</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">12000</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">12000</entry>
+              <entry xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">14000</entry>
+            </row>
+          </tbody>
+        </tgroup>
+
+<caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">This caption put in to test styling.</caption>
+      </table>
+
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="quote_foreign">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Quotes and Foreign Terms</name>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="quotfor1">Two new elements added in CNXML 0.5 are <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">quote</term> and <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">foreign</term>.  A <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">quote</term> of type "block" might look like this:
+        <quote xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="block">I define the <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">real</emphasis> as that which holds its characters on such a tenure that it makes not the slightest difference what any man or men may have <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">thought</emphasis> them to be, or ever will have <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">thought</emphasis> them to be, here using thought to include, imagining, opining, and willing (as long as forcible <emphasis xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">means</emphasis> are not used); but the real thing's characters will remain absolutely untouched. --C.S. Peirce, <cite xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Collected Papers</cite> 6.495.</quote>
+
+        Anyone involved in interface design and usability should consider Einstein's axiom (shown here in a <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">quote</term> of type 'inline'): <quote xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="inline">Everything should be made as simple as possible, but not one bit simpler</quote>.</para>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="quotfor2">In order to appear urbane and literate, we should liberally sprinkle our discourse with foreign terms and phrases, such as <foreign xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Fahrvergn&#252;gen</foreign> and <foreign xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cnxn_to_foreign">sang-froid</foreign>.</para>
+      <note xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="irrelevant">It is possible to include a block quote inside a note, with <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">foreign</term> elements interspersed:
+      <quote xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="block"><foreign xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">"Freundschaftsbezeigungen"</foreign> seems to be "Friendship demonstrations," which is only a foolish and clumsy way of saying "demonstrations of friendship." <foreign xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">"Unabh&#228;ngigkeitserkl&#228;rungen"</foreign> seems to be "Independencedeclarations," which is no improvement upon "Declarations of Independence," so far as I can see. <foreign xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">"Generalstaatsverordnetenversammlungen"</foreign> seems to be "General-statesrepresentativesmeetings," as nearly as I can get at it -- a mere rhythmical, gushy euphuism for "meetings of the legislature," I judge.  --Mark Twain, <cite xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">"The Awful German Language"</cite></quote>
+
+      </note>
+    </section>
+    <section xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="concl">
+      <name xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">Conclusion</name>
+      <para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="cc">
+  For more information on all of the CNXML used in this
+  module, please refer to the <link xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" src="http://cnx.rice.edu/cnxml/0.5/spec/">CNXML Spec</link>.
+      </para>
+    </section>
+
+
+<figure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="printscreendiffs" orient="horizontal">
+<subfigure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+<media xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="image/png" src="tall-72.png"/>
+<caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">72 dpi</caption>
+</subfigure>
+<subfigure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+<media xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="image/png" src="tall-150.png"/>
+<caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">150 dpi</caption>
+</subfigure>
+<subfigure xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">
+<media xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" type="image/png" src="tall-300.png"/>
+<caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">300 dpi</caption>
+
+</subfigure>
+<caption xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">An example of how media that appear to be the same size on screen can be a different size in print due to resolution.</caption>
+</figure>
+
+  </content>
+  <glossary xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="gloss">
+    <definition xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="gloss_def1">
+      <term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">glossary</term>
+      <meaning xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/">A listing of terms together with their meanings.</meaning>
+
+      <example xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><para xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" id="gloss_def1_p1"><cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" target="gloss_def1">This very glossary.</cnxn></para></example>
+      <seealso xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><term xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/"><cnxn xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:bib="http://bibtexml.sf.net/" document="m11171" target="missesdef">Misses</cnxn></term></seealso>
+    </definition>
+  </glossary>
+</document>

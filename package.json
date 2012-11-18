@@ -1,0 +1,31 @@
+{
+  "name": "cnx.analytics",
+  "version": "0.0.1",
+  "main": "server/index.js",
+  "private": true,
+  "bin": {
+    "sfw-noded": "./server/index.js"
+  },
+  "dependencies": {
+    "coffee-script": "~1.2",
+    "express": "~2.5",
+    "optimist": "~0.3",
+    "jsdom": "~0.2",
+    "jquery": ">=1.8",
+    "jquery-component": ">=1.8",
+    "carrier": ">=0.1.7",
+    "nvd3": "git+https://github.com/philschatz/nvd3"
+  },
+  "devDependencies": {
+    "docco": "~0.3",
+    "mocha": "~0.10",
+    "should": "~0.5"
+  },
+  "engines": {
+    "node": "~0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philschatz/cnx.analytics"
+  }
+}

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Analytics Console</title>
+
+<script type="text/javascript">var module = {}; </script>
+<script type="text/javascript" src="./jquery-component/dist/jquery.js"></script>
+
+    <script src="nvd3/js/lib/jquery.min.js"></script>
+    <script src="nvd3/js/lib/bootstrap.js"></script>
+
+    <script src="humane-dates.js"></script>
+
+<link rel="stylesheet" href="nvd3/css/codemirror.css"></link>
+<link rel="stylesheet" href="nvd3/css/eclipse.css"></link>
+
+
+    <link href="nvd3/css/bootstrap.css" rel="stylesheet">
+    <link href="nvd3/css/common.css" rel="stylesheet">
+    <link href="nvd3/src/nv.d3.css" rel="stylesheet">
+    <link href="nvd3/css/syntax.css" rel="stylesheet">
+
+    <script src="nvd3/lib/d3.v2.js"></script>
+    <script src="nvd3/lib/fisheye.js"></script>
+    <script src="nvd3/nv.d3.js"></script>
+
+    <script src="nvd3/js/data/stream_layers.js"></script>
+
+<script type="text/javascript" src="nvd3/js/lib/codemirror/codemirror.js"> </script>
+<script type="text/javascript" src="nvd3/js/lib/codemirror/xml/xml.js"> </script>
+<script type="text/javascript" src="nvd3/js/lib/codemirror/javascript/javascript.js"> </script>
+<script type="text/javascript" src="nvd3/js/lib/codemirror/css/css.js"> </script>
+<script type="text/javascript" src="nvd3/js/lib/codemirror/gfm/gfm.js"> </script>
+<script type="text/javascript" src="nvd3/js/lib/codemirror/htmlmixed/htmlmixed.js"> </script>
+
+
+
+<style type="text/css">
+  textarea { min-height: 25em; width: 90%; }
+
+  /* The iframe */
+  #preview {
+    width: 100%;
+    min-height: 500px;
+    border-width: 0;
+  }
+
+  .status a { font-weight: bold; }
+  #more-examples textarea { min-height: 25em; width: 90%; }
+  #more-examples textarea { display: none; }
+
+  .estimate .datetime { text-transform: lowercase; }
+
+</style>
+
+  </head>
+  <body>
+
+  <h2>Let's do some Content Crunching! <small>(or go to the <a href="admin.html">admin view</a>)</small></h2>
+
+  <div class="row">
+  <div class="span6">
+    <ul class="nav nav-tabs" id="edit-tabs">
+      <li class="active"><a href="#code-server" data-toggle="tab">Server Code</a></li>
+      <li><a href="#data-preview" data-toggle="tab">JSON Data</a></li>
+      <li><a href="#code-client" data-toggle="tab">Graph Code</a></li>
+      <li><a href="#html-client" data-toggle="tab">Graph HTML</a></li>
+      <li><a href="#more-examples" data-toggle="modal">(More Examples)</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="code-server">
+        <form action="/tasks" method="POST">
+          <p>Code that runs on each piece of content:</p>
+          <textarea name="src">
+/* For each piece of content there are a few
+ * variables you have access to.
+ * You can get to them using requirejs define:
+ *
+ * - state : object you update that stores results
+ * - $root : jQuery root element of the document
+ * - metadata : has things like roles, title, etc
+ * - resources : Info on the resources like
+ *               mime/type and file size
+ */
+define(['state', '$root'], function(state, $root) {
+
+  /* This example finds the frequency of elements
+   * in a piece of content */
+  $root.find('content *').each(function(i, el) {
+    /* HINT: Remove ".toLowerCase()" and see */
+    var tag = el.tagName.toLowerCase();
+    /* Remove the namespace prefix */
+    tag = tag.split(':');
+    tag = tag[tag.length-1];
+
+    /* Update the state after analyzing this
+     * piece of content */
+    state[tag] = state[tag] || 0; /* Init if null */
+    state[tag] += 1;
+  });
+
+}) /* End requirejs define */
+</textarea>
+          <div>
+            <button class="btn btn-primary" type="submit">Submit!</button>
+          </div>
+        </form>
+      </div>
+      <div class="tab-pane" id="data-preview">
+        <p>This is the data being fed to the chart. Either it was populated by clicking "Preview" or it periodically changes if you clicked "Submit"</p>
+        <textarea name="data">Click Preview 1st</textarea>
+      </div>
+      <div class="tab-pane" id="code-client">
+        <h4>Graph Generation</h4>
+        <p>This is the code that takes the <a href="#data-preview" data-toggle="tab">JSON Data</a> and generates a graph.</p>
+        <textarea name="graph">
+/* This code runs in the browser and:
+ * - Takes the JSON from the server (the 'data' variable)
+ * - Massages it by filtering/organizing results
+ * - Reformats the data to a format the graph can render
+ * - Configures the graph
+ */
+nv.addGraph(function() {
+  /* HINT: change discreteBarChart to pieChart */
+  var chart = nv.models.discreteBarChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .tooltips(true)
+
+  /* HINT: Play around with these to see the chart change. */
+  var MINIMUM_COUNT = 10;
+  var FILTER_KEYS = ['cnxn'];
+
+  /* -------------- Danger: Below be dragons! -------------- */
+
+  /* Convert the JSON Data from the server into a
+   * format the chart understands.
+   * You can also filter/rearrange/group the data at this point.
+   */
+
+  /* JSON Data format from the server:
+  { para: 1234,
+    section: 123,
+    math: 1123
+  }
+  */
+
+  var values = [];
+  for(key in data) {
+    var count = data[key];
+    /* Filter using MINIMUM_COUNT and FILTER_KEYS */
+    if (count > MINIMUM_COUNT && (FILTER_KEYS.indexOf(key) < 0)) {
+      values.push({label: key, value:count});
+    }
+  }
+  data = [ {key:'', values:values}];
+
+
+  /* Expected format for the pie/bar chart:
+  [ { key: "Chart Title",
+      values: [
+        {  "label" : "A" , "value" : -29.7 } ,
+        {  "label" : "B" , "value" : 0 } ,
+  */
+
+  /* Bind the chart to the data and tho the #chart div */
+  d3.select('#chart svg')
+      .datum(data)
+    .transition().duration(500)
+      .call(chart);
+
+  nv.utils.windowResize(chart.update);
+
+  return chart;
+});
+</textarea>
+      </div>
+      <div class="tab-pane" id="html-client">
+        <p>HTML and styling for the graph</p>
+        <textarea name="html">&lt;style>
+
+#chart svg {
+  height: 400px;
+}
+
+&lt;/style>
+
+
+&lt;div id="chart">
+  &lt;svg>&lt;/svg>
+&lt;/div></textarea>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="span6 results">
+    <div class="status alert alert-error">
+      <h4>Task Failed</h4>
+      <p>Something went wrong while processing your task (maybe you killed it?)</p>
+      <p>Please submit a new one by starting with the <a href="#code-server" data-toggle="tab">Server Code</a> tab.</p>
+    </div>
+    <div class="status alert alert-success">
+      <p><strong>Finished!</strong> We finished processing the data on the server!</p>
+      <p>You can still modify the <a href="#code-client" data-toggle="tab">Graph Code</a> and tweak the graph or start playing around with <a href="#more-examples" data-toggle="modal">Other Examples</a></p>
+    </div>
+    <div class="status alert alert-info">
+      <p><strong>Note:</strong> We are churning away on the content in the repository. As we get updates the graph will update as well.</p>
+      <p>You can modify the <a href="#code-client" data-toggle="tab">Graph Code</a> as the <a href="#data-preview" data-toggle="tab">Data</a> are updated or start playing around with <a href="#more-examples" data-toggle="modal">Other Examples</a></p>
+      <div class="progress progress-striped active">
+        <div class="bar"></div>
+      </div>
+      <button class="btn btn-danger kill-task">Cancel Task</button>
+      <span class="estimate"> (Only <span class="datetime">#</span> to go!)</span>
+    </div>
+    <div class="status alert alert-warning">
+      <strong>Preview Only:</strong>
+      This graph is made using a single sample CNXML module as input. Click "Submit" in <a href="#code-server" data-toggle="tab">Server Code</a> to start a real job.
+    </div>
+    <iframe id="preview">
+
+    </iframe>
+
+  </div>
+</div><!-- End .row -->
+  <script type="text/javascript">
+//<!--
+
+jQuery().ready(function() {
+
+// Initialize all the editors by making them visible
+$('#code-client').addClass('active');
+$('#html-client').addClass('active');
+
+// Hide all the status alerts
+$('.status').hide();
+$('.status.alert-warning').show();
+
+
+$('.preview-button').on('click', function(evt){
+  evt.preventDefault();
+  generateDataFromPreviewContent();
+  $('#edit-tabs a[href="#data-preview"]').tab('show');
+});
+
+
+
+var previewContent = jQuery('<div></div>').load('dummy.xml', function() {
+  generateDataFromPreviewContent();
+  // Hide the other editors once some period of time elapsed
+  // These should probably be elsewhere wbut it was convenient to put here
+  $('#code-client').removeClass('active');
+  $('#html-client').removeClass('active');
+});
+
+var generateDataFromPreviewContent = function() {
+
+
+  /* Autogenerated from (to match scaffolding.coffee):
+      valids =
+        state: state
+        jQuery: jQuery
+        $root: $root
+      define2 = (dependencies, callback) ->
+        args = (valids[d] for d in dependencies)
+        callback.apply null, args
+
+      try
+        func define2
+      catch e
+        console.log "ERROR: #{JSON.stringify e}"
+  */
+
+  var __DEFINE2, __VALIDS;
+
+  __VALIDS = {
+    state: {},
+    jQuery: jQuery,
+    $root: previewContent.children().clone()
+  };
+
+  __DEFINE2 = function(dependencies, callback) {
+    var args, d;
+    args = (function() {
+      var _i, _len, _results;
+      _results = [];
+      for (_i = 0, _len = dependencies.length; _i < _len; _i++) {
+        d = dependencies[_i];
+        _results.push(__VALIDS[d]);
+      }
+      return _results;
+    })();
+    return callback.apply(null, args);
+  };
+
+  try {
+    // Added this line
+    var func;
+    eval('func = function(define, state, jQuery) { ' + serverEditor.getValue() + '};');
+    func(__DEFINE2);
+    // Added this line
+    $('#code-server button[type=submit]').removeClass('disabled');
+  } catch (e) {
+    console.log("ERROR: " + (JSON.stringify(e)));
+    // Added this line
+    $('#code-server button[type=submit]').addClass('disabled');
+    throw e;
+  }
+
+  jQuery('textarea[name="data"]').val(JSON.stringify(__VALIDS.state));
+
+  updateGraph();
+}
+
+var updateGraph = function() {
+  var preMarkup = '<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="nvd3/src/nv.d3.css"><script type="text/javascript" src="nvd3/lib/d3.v2.js"></script><script type="text/javascript" src="nvd3/lib/fisheye.js"></script><script type="text/javascript" src="nvd3/nv.d3.js"></script></head><body>';
+  var midMarkup = '<script>var data = ';
+  var midMarkup2 = ';';
+  var postMarkup = '</script></body></html>';
+
+  var previewFrame = $('#preview')[0];
+  var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+  preview.open();
+  preview.write(preMarkup + htmlEditor.getValue() + midMarkup + $('textarea[name=data]').val() + midMarkup2 + clientEditor.getValue() + postMarkup);
+  preview.close();
+
+}
+setTimeout(updateGraph, 300);
+
+
+var delay = 0;
+var serverEditor = CodeMirror.fromTextArea(jQuery('textarea[name=src]')[0], {
+  mode: 'javascript',
+  tabMode: 'indent',
+  theme: 'eclipse',
+  lineNumbers: true,
+  lineWrapping: true,
+  keyMap: 'default',
+  onChange: function() {
+    clearTimeout(delay);
+    delay = setTimeout(generateDataFromPreviewContent, 1500);
+  }
+});
+
+
+var clientEditor = CodeMirror.fromTextArea(jQuery('textarea[name=graph]')[0], {
+  mode: 'javascript',
+  tabMode: 'indent',
+  theme: 'eclipse',
+  lineNumbers: true,
+  lineWrapping: true,
+  keyMap: 'default',
+  onChange: function() {
+    clearTimeout(delay);
+    delay = setTimeout(updateGraph, 1500);
+  }
+});
+
+var htmlEditor = CodeMirror.fromTextArea(jQuery('textarea[name=html]')[0], {
+  mode: 'text/html',
+  tabMode: 'indent',
+  theme: 'eclipse',
+  lineNumbers: true,
+  lineWrapping: true,
+  keyMap: 'default',
+  onChange: function() {
+    clearTimeout(delay);
+    delay = setTimeout(updateGraph, 1500);
+  }
+});
+
+
+/* -------------- Load Editors from Query String ------- */
+
+var urlParams = {};
+(function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+
+if (urlParams.src) { serverEditor.setValue(urlParams.src); }
+if (urlParams.graph) { clientEditor.setValue(urlParams.graph); }
+if (urlParams.html) { htmlEditor.setValue(urlParams.html); }
+
+
+/* -------------- Task Submission ---------- */
+
+var taskPoll = null; // This will be a timeout that can be cleared
+var currentTask = null;
+
+$('.kill-task').on('click', function(evt) {
+  evt.preventDefault();
+
+  jQuery.ajax(currentTask + '/kill', {
+    type: 'GET'
+  });
+  jQuery(this).addClass('disabled');
+})
+
+/* Called if submit was successful */
+var startProgress = function() {
+  window.location.hash = '#!' + currentTask;
+
+
+  // Disable the server tab
+
+  var progress = $('.results .progress .bar');
+  var dataEditor = $('textarea[name=data]');
+
+  var retry = function() {
+    jQuery.ajax(currentTask, {
+      type: 'GET',
+      // Can't use success: because a 202 return code still counts as success
+      //success: function(text, status) { },
+      statusCode: {
+        200: function(data) {
+          dataEditor.val(JSON.stringify(data));
+          updateGraph();
+          $('.status').hide();
+          $('.status.alert-success').show();
+        },
+        202: function(task) {
+          var data = task.state;
+
+          $('.status').not($('.status.alert-info')).hide();
+          $('.status.alert-info').show();
+          $('.status.alert-info .kill-task').removeClass('disabled');
+
+          if(task.progress) {
+            var $progress = $('.progress');
+            var $bar = $progress.find('.bar');
+            var $estimate = $('.estimate .datetime')
+
+            var fraction = task.progress.finished / task.progress.total;
+            var percent = Math.round(fraction * 100);
+            $bar.width(percent + '%');
+            $progress.attr('title', 'Completed ' + task.progress.finished + '/' + task.progress.total + ' units (' + percent + '%)');
+
+            // Calculate Estimated Time to completion
+            var started = new Date(task.created).getTime();
+            var modified = new Date(task.modified).getTime();
+            var taken = modified - started;
+            var estimate = taken / fraction;
+            $estimate.attr('title', JSON.stringify(new Date(started + estimate)));
+            $estimate.humaneDates();
+
+            var percent = task.progress.finished * 100 / task.progress.total;
+            $('.progress .bar').width(percent + '%');
+          }
+
+
+          if (data) {
+            dataEditor.val(JSON.stringify(data));
+            updateGraph();
+          }
+          // Still Pending so retry in 10sec
+          taskPoll = setTimeout(retry, 10000);
+        }
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        // Stop retrying
+        $('.status').not($('.status.alert-error')).hide();
+        $('.status.alert-error').show();
+      }
+    });
+  };
+  taskPoll = setTimeout(retry, 2000);
+};
+
+if(window.location.hash[1]=='!') {
+  currentTask = window.location.hash.substring(2);
+  startProgress();
+}
+
+$('#code-server button[type=submit]').on('click', function(evt) {
+  evt.preventDefault(); // Don't let the browser submit the form!
+
+  if ($(this).hasClass('disabled')) {
+    return; //don't submit if it's disabled
+  }
+
+  var params = {};
+  params['src'] = serverEditor.getValue();
+  var method = 'POST';
+  var action = '/tasks';
+
+
+  $.ajax(action, {
+    type: method,
+    data: params,
+    success: function(text, status) {
+      //alert("Succeeded with message (Check this URL for status): " + text);
+      currentTask = text;
+      startProgress();
+    },
+    statusCode: {
+      404: function() {
+        alert("Error! Did you log in? To Perform this operation you must be logged in");
+      }
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      alert("Failed! Did you log in?");
+    }
+  });
+});
+
+
+
+/* ---------- More Examples -------------- */
+  $('#more-examples form').each(function(i, form) {
+    var $form = $(form);
+    $form.find('button[type=submit]').on('click', function(evt) {
+      evt.preventDefault();
+
+      if ($form.find('*[name=src]')[0]) { serverEditor.setValue($form.find('*[name=src]').val()); }
+      if ($form.find('*[name=graph]')[0]) { clientEditor.setValue($form.find('*[name=graph]').val()); }
+      if ($form.find('*[name=html]')[0]) { htmlEditor.setValue($form.find('*[name=html]').val()); }
+
+    });
+
+  });
+
+
+
+}); // End jQuery.ready();
+
+//-->
+    </script>
+
+
+  <div id="more-examples" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="more-examples-header" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h2 id="more-examples-header">Other Examples</h2>
+    <p>Clicking these will repopulate (parts of) the editors</p>
+  </div>
+  <div class="modal-body">
+
+    <form action="" method="GET">
+      <textarea name="src">
+define(['state', '$root'], function(state, $root) {
+
+  /* Titles with child Elements */
+  $root.find('title > *').each(function(i, el) {
+    var key = el.tagName.toLowerCase();
+    /* Remove the namespace prefix */
+    key = key.split(':');
+    key = key[key.length-1];
+
+    /* Update the state */
+    state[key] = state[key] || 0; /* Init if not already set */
+    state[key] += 1;
+
+  });
+})
+
+</textarea>
+      <button class="btn btn-primary" type="submit">Titles with Child Elements</button>
+    </form>
+
+
+    <form action="" method="GET">
+      <textarea name="src">
+define(['state', '$root'], function(state, $root) {
+
+  /* Links with child Elements */
+  $root.find('link > *').each(function(i, el) {
+    var key = el.tagName.toLowerCase();
+    /* Remove the namespace prefix */
+    key = key.split(':');
+    key = key[key.length-1];
+
+    /* Update the state */
+    state[key] = state[key] || 0; /* Init if not already set */
+    state[key] += 1;
+
+  });
+})
+</textarea>
+      <button class="btn btn-primary" type="submit">Links with Child Elements</button>
+    </form>
+
+
+
+    <form action="" method="GET">
+      <textarea name="src">
+define(['state', '$root'], function(state, $root) {
+
+  /* External Link Domains */
+  $root.find('link[url]').each(function(i, el) {
+    var $el = jQuery(el);
+    var $a = jQuery('<a></a>').attr('href', $el.attr('url'));
+    var host = $a[0].hostname;
+    var key = host;
+
+    if(host.trim() == '') { return; }
+    /* Update the state */
+    state[key] = state[key] || 0; /* Initialize if not already set */
+    state[key] += 1;
+
+  });
+})
+</textarea>
+
+<textarea name="graph">
+/* Actual Data format:
+{ para: 1234,
+  section: 123,
+  math: 1123
+}
+*/
+
+/* Strip domain prefixes off (This could be done on the server instead) */
+var data2 = {};
+for(key in data) {
+  var count = data[key];
+  var parts = key.split('.');
+  function incKey(key, count) {
+    data2[key] = data2[key] || 0;
+    data2[key] += count;
+  };
+  if (parts.length > 1) {
+    var key = parts[parts.length-2] + '.' +parts[parts.length-1];
+    incKey('*' + key, count);
+  }
+}
+data = data2;
+
+/* Convert the actual format to
+ * the pie chart format */
+var values = [];
+for(key in data) {
+  var count = data[key];
+  if (count > 50) {
+    values.push({label: key, value:count});
+  }
+
+}
+data = [ {key:'', values:values}];
+
+/* Expected format for the pie/bar chart:
+[ { key: "Cumulative Return",
+    values: [
+      {  "label" : "A" , "value" : -29.7 } ,
+      {  "label" : "B" , "value" : 0 } ,
+*/
+
+nv.addGraph(function() {
+  var chart = nv.models.discreteBarChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .tooltips(true)
+
+  d3.select('#chart svg')
+      .datum(data)
+    .transition().duration(500)
+      .call(chart);
+
+  nv.utils.windowResize(chart.update);
+
+  return chart;
+});
+            </textarea>
+      <button class="btn btn-primary" type="submit">Top External Domains Linked from Us</button>
+    </form>
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+
+  </div>
+
+  </body>
+</html>
