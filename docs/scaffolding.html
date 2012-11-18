@@ -1,0 +1,128 @@
+<!DOCTYPE html>  <html> <head>   <title>scaffolding.coffee</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>            <div id="jump_to">         Jump To &hellip;         <div id="jump_wrapper">           <div id="jump_page">                                           <a class="source" href="server.html">                 server.coffee               </a>                                           <a class="source" href="scaffolding.html">                 scaffolding.coffee               </a>                        </div>         </div>       </div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               scaffolding.coffee             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>               <p>This is the worker process.
+It opens all the files in a directory tree and executes <strong>arbitrary</strong>
+user-provided Javascript on each.</p>
+
+<p>The Javascript is read in via stdin
+and the worker outputs progress information and intermediate state to stdio.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="nv">module.exports = exports = </span><span class="nf">(argv) -&gt;</span>
+  <span class="nv">path = </span><span class="nx">require</span> <span class="s">&#39;path&#39;</span>
+  <span class="nv">fs = </span><span class="nx">require</span> <span class="s">&#39;fs&#39;</span>
+  <span class="nv">jsdom = </span><span class="nx">require</span> <span class="s">&#39;jsdom&#39;</span></pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <p>Array shuffler (so we randomly walk over the content)</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nv">shuffle = </span><span class="nf">(arr) -&gt;</span>
+    <span class="nv">i = </span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span>
+    <span class="k">return</span> <span class="k">if</span> <span class="mi">0</span> <span class="o">==</span> <span class="nx">i</span>
+    <span class="k">while</span> <span class="o">--</span><span class="nx">i</span>
+      <span class="nv">j = </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">)</span>
+      <span class="p">[</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">],</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span></pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>               <p>Helper function to reduce the stack size</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nv">tailCall = </span><span class="nf">(cb) -&gt;</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="o">-&gt;</span>
+      <span class="nx">cb</span><span class="p">()</span>
+    <span class="p">,</span> <span class="mi">1</span><span class="p">)</span></pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>Recursively finds files that match a certain regex and then
+calls <code>callback</code> with the array of file paths</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nv">findFiles = </span><span class="nf">(href, regex, callback, state={}) -&gt;</span>
+    <span class="nv">state.count = </span><span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">or</span> <span class="mi">0</span>
+    <span class="nv">state.files = </span><span class="nx">state</span><span class="p">.</span><span class="nx">files</span> <span class="o">or</span> <span class="p">[]</span>
+
+    <span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">stat</span> <span class="nx">href</span><span class="p">,</span> <span class="nf">(err, stat) -&gt;</span>
+      <span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="o">--</span>
+      <span class="k">throw</span> <span class="nx">err</span> <span class="k">if</span> <span class="nx">err</span>
+      <span class="k">if</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">isDirectory</span><span class="p">()</span>
+        <span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span>
+        <span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span> <span class="nx">href</span><span class="p">,</span> <span class="nf">(err, files) -&gt;</span>
+          <span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="o">--</span>
+          <span class="k">throw</span> <span class="nx">err</span> <span class="k">if</span> <span class="nx">err</span>
+          <span class="nx">files</span><span class="p">.</span><span class="nx">forEach</span> <span class="nf">(file) -&gt;</span>
+            <span class="nx">findFiles</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">href</span><span class="p">,</span> <span class="nx">file</span><span class="p">),</span> <span class="nx">regex</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">state</span>
+      <span class="k">else</span>
+        <span class="nx">state</span><span class="p">.</span><span class="nx">files</span><span class="p">.</span><span class="nx">push</span> <span class="nx">href</span> <span class="k">if</span> <span class="nx">regex</span><span class="p">.</span><span class="nx">test</span> <span class="nx">href</span>
+        <span class="k">if</span> <span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+          <span class="nx">tailCall</span> <span class="o">-&gt;</span>
+            <span class="nx">callback</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">state</span><span class="p">.</span><span class="nx">files</span></pre></div>             </td>           </tr>                               <tr id="section-5">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-5">&#182;</a>               </div>               <p>Executes arbitrary javascript
+This is <strong>VERY</strong> unsafe.
+I think there are 3 ways to prevent misuse:</p>
+
+<ol>
+<li>unassign all variables in this scope</li>
+<li>parse the string to make sure curly braces and parens match
+(and the nesting depth never equals 0)</li>
+<li>Kill this process after inactivity (no infinite loops)</li>
+</ol>
+
+<p>The webserver can tell it's inactive because:</p>
+
+<ol>
+<li>This function can't spawn work to occur later (<code>setTimeout</code> and <code>setInterval</code>)</li>
+<li>By being in this loop the worker cannot report progress to stdout (yay event loops!)</li>
+</ol>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nv">safeishEval = </span><span class="nf">(jsString) -&gt;</span></pre></div>             </td>           </tr>                               <tr id="section-6">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-6">&#182;</a>               </div>               <p>FIXME: I'm sure there are injection problems here. make sure the curly braces and parentheses match before running eval()</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nv">evalStr = </span><span class="s">&quot;&quot;&quot;(function(define,</span>
+<span class="s">      evalStr, jsString, ret,</span>
+<span class="s">      argv, findFiles, fs, jsdom, path, safeRunner, shuffle, tailCall,</span>
+<span class="s">      exports, __dirName, __fileName, module, require,</span>
+<span class="s">      global, process, setInterval, setTimeout,</span>
+<span class="s">      undefined) {</span>
+<span class="s">        </span><span class="si">#{</span><span class="nx">jsString</span><span class="si">}</span><span class="s"></span>
+<span class="s">      }).bind(null)&quot;&quot;&quot;</span>
+    <span class="nv">f = </span><span class="nb">eval</span> <span class="nx">evalStr</span>
+    <span class="k">return</span> <span class="nx">f</span></pre></div>             </td>           </tr>                               <tr id="section-7">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-7">&#182;</a>               </div>               <p>Prepare to read in the <strong>unsafe</strong> arbitrary javascript</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">.</span><span class="nx">resume</span><span class="p">()</span>
+  <span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">.</span><span class="nx">setEncoding</span> <span class="s">&#39;utf8&#39;</span></pre></div>             </td>           </tr>                               <tr id="section-8">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-8">&#182;</a>               </div>               <p>Start up a DOM and jQuery.
+It is very time consuming to start one up for each piece of content
+So we start one up and then reuse it for every piece of content</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">jsdom</span><span class="p">.</span><span class="nx">env</span> <span class="s">&#39;&lt;root&gt;&lt;/root&gt;&#39;</span><span class="p">,</span>
+    <span class="nv">features:</span>
+      <span class="nv">FetchExternalResources: </span><span class="kc">false</span> <span class="c1"># [&#39;img&#39;]</span>
+      <span class="nv">ProcessExternalResources: </span><span class="kc">false</span>
+  <span class="p">,</span> <span class="nf">(err, window) -&gt;</span>
+    <span class="k">if</span> <span class="nx">err</span>
+      <span class="k">throw</span> <span class="s">&#39;jsdom failed to load for some reason&#39;</span>
+
+    <span class="nv">jQuery = </span><span class="nx">require</span><span class="p">(</span><span class="s">&#39;jQuery&#39;</span><span class="p">).</span><span class="nx">create</span><span class="p">(</span><span class="nb">window</span><span class="p">)</span></pre></div>             </td>           </tr>                               <tr id="section-9">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-9">&#182;</a>               </div>               <p>Once we have a DOM started up read in the <strong>unsafe</strong> javascript</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">process</span><span class="p">.</span><span class="nx">stdin</span><span class="p">.</span><span class="kc">on</span> <span class="s">&#39;data&#39;</span><span class="p">,</span> <span class="nf">(jsBuf) -&gt;</span>
+      <span class="nv">func = </span><span class="nx">safeishEval</span><span class="p">(</span><span class="nx">jsBuf</span><span class="p">.</span><span class="nx">toString</span><span class="p">())</span>
+      <span class="nv">state = </span><span class="p">{}</span>
+      <span class="nv">progress = </span><span class="p">{</span><span class="nv">total: </span><span class="mi">0</span><span class="p">,</span> <span class="nv">finished: </span><span class="mi">0</span><span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-10">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-10">&#182;</a>               </div>               <p>Because there are many files to open we batch proceesing them
+(otherwise we'd run out of file descriptors)</p>             </td>             <td class="code">               <div class="highlight"><pre>      <span class="nv">batcher = </span><span class="nf">(err, files, pending) -&gt;</span></pre></div>             </td>           </tr>                               <tr id="section-11">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-11">&#182;</a>               </div>               <p>A tick is called when done with a piece of content
+This decreases the pending queue and runs batch
+(if patch is called with a non-empty pending queue then nothing happens)</p>             </td>             <td class="code">               <div class="highlight"><pre>        <span class="nv">batchTick = </span><span class="nf">() -&gt;</span>
+          <span class="nx">tailCall</span> <span class="o">-&gt;</span>
+            <span class="nx">progress</span><span class="p">.</span><span class="nx">finished</span><span class="o">++</span>
+            <span class="nx">pending</span><span class="p">.</span><span class="nx">splice</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+            <span class="nx">batcher</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">files</span><span class="p">,</span> <span class="nx">pending</span><span class="p">)</span></pre></div>             </td>           </tr>                               <tr id="section-12">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-12">&#182;</a>               </div>               <p>If the pending queue is empty and there are no more files
+to process then we're done!</p>             </td>             <td class="code">               <div class="highlight"><pre>        <span class="k">if</span> <span class="nx">files</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">and</span> <span class="nx">pending</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;FINISHED: </span><span class="si">#{</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span> <span class="nx">state</span><span class="si">}</span><span class="s">&quot;</span>
+          <span class="k">return</span></pre></div>             </td>           </tr>                               <tr id="section-13">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-13">&#182;</a>               </div>               <p>If the pending queue is empty again, refill it</p>             </td>             <td class="code">               <div class="highlight"><pre>        <span class="k">if</span> <span class="nx">pending</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">and</span> <span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;PROGRESS: </span><span class="si">#{</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span> <span class="nx">progress</span><span class="si">}</span><span class="s">&quot;</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;STATE: </span><span class="si">#{</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span> <span class="nx">state</span><span class="si">}</span><span class="s">&quot;</span> <span class="k">if</span> <span class="nx">argv</span><span class="p">.</span><span class="nx">i</span></pre></div>             </td>           </tr>                               <tr id="section-14">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-14">&#182;</a>               </div>               <p>Pop 40 pieces of content at time into the pending queue
+(we'll be waiting for disk io)</p>             </td>             <td class="code">               <div class="highlight"><pre>          <span class="p">(</span><span class="nx">pending</span><span class="p">.</span><span class="nx">push</span> <span class="nx">files</span><span class="p">.</span><span class="nx">pop</span><span class="p">()</span> <span class="k">if</span> <span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="nx">num</span> <span class="k">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">..</span><span class="mi">40</span><span class="p">]</span>
+
+          <span class="nx">pending</span><span class="p">.</span><span class="nx">forEach</span> <span class="nf">(href) -&gt;</span>
+            <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span> <span class="nx">href</span><span class="p">,</span> <span class="s">&#39;utf-8&#39;</span><span class="p">,</span> <span class="nf">(err, xml) -&gt;</span>
+              <span class="k">return</span> <span class="nx">batchTick</span><span class="p">()</span> <span class="k">if</span> <span class="nx">err</span></pre></div>             </td>           </tr>                               <tr id="section-15">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-15">&#182;</a>               </div>               <p>Clear up the DOM and then load in the new one</p>             </td>             <td class="code">               <div class="highlight"><pre>              <span class="nx">jQuery</span><span class="p">(</span><span class="s">&#39;root&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nv">innerHTML = </span><span class="nx">xml</span>
+
+              <span class="nv">$root = </span><span class="nx">jQuery</span><span class="p">(</span><span class="s">&#39;root&#39;</span><span class="p">).</span><span class="nx">children</span><span class="p">()</span> <span class="c1"># The &lt;document&gt; element for modules</span></pre></div>             </td>           </tr>                               <tr id="section-16">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-16">&#182;</a>               </div>               <p>Emulate requirejs syntax by providing a <code>define</code> function
+that provides access to objects.
+This way we (backend) can see/limit which features are being
+used and optimize (Don't reset/load jQuery
+  or parse the DOM of it isn't going to be used.</p>             </td>             <td class="code">               <div class="highlight"><pre>              <span class="nv">valids =</span>
+                <span class="nv">state: </span><span class="nx">state</span>
+                <span class="nv">jQuery: </span><span class="nx">jQuery</span>
+                <span class="nv">$root: </span><span class="nx">$root</span>
+              <span class="nv">define2 = </span><span class="nf">(dependencies, callback) -&gt;</span>
+                <span class="nv">args = </span><span class="p">(</span><span class="nx">valids</span><span class="p">[</span><span class="nx">d</span><span class="p">]</span> <span class="k">for</span> <span class="nx">d</span> <span class="k">in</span> <span class="nx">dependencies</span><span class="p">)</span>
+                <span class="nx">callback</span><span class="p">.</span><span class="nx">apply</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">args</span>
+
+              <span class="k">try</span>
+                <span class="nx">func</span> <span class="nx">define2</span>
+              <span class="k">catch</span> <span class="nx">e</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;ERROR: </span><span class="si">#{</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span> <span class="nx">e</span><span class="si">}</span><span class="s">&quot;</span>
+
+              <span class="nx">batchTick</span><span class="p">()</span></pre></div>             </td>           </tr>                               <tr id="section-17">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-17">&#182;</a>               </div>               <p>Here is where all the work starts</p>
+
+<ul>
+<li>Find all the files that match a pattern</li>
+<li>Shuffle them</li>
+<li>Drop some of them if we are only running on a subset</li>
+<li>Start the batch analysis process</li>
+</ul>             </td>             <td class="code">               <div class="highlight"><pre>      <span class="nx">findFiles</span> <span class="nx">argv</span><span class="p">.</span><span class="nx">c</span><span class="p">,</span> <span class="sr">/index\.cnxml/</span><span class="p">,</span> <span class="nf">(err, files) -&gt;</span>
+        <span class="k">if</span> <span class="nx">argv</span><span class="p">.</span><span class="nx">r</span>
+          <span class="nx">shuffle</span><span class="p">(</span><span class="nx">files</span><span class="p">)</span></pre></div>             </td>           </tr>                               <tr id="section-18">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-18">&#182;</a>               </div>               <p>If this worker is running on a subset of content then
+splice the rest out.</p>             </td>             <td class="code">               <div class="highlight"><pre>        <span class="k">if</span> <span class="nx">argv</span><span class="p">.</span><span class="nx">s</span> <span class="o">!=</span> <span class="mi">100</span>
+          <span class="nx">files</span><span class="p">.</span><span class="nx">splice</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span> <span class="o">-</span> <span class="nx">argv</span><span class="p">.</span><span class="nx">s</span><span class="p">)</span> <span class="o">*</span> <span class="nx">files</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">100</span>
+        <span class="nv">progress.total = </span><span class="nx">files</span><span class="p">.</span><span class="nx">length</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;PROGRESS: </span><span class="si">#{</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span> <span class="nx">progress</span><span class="si">}</span><span class="s">&quot;</span>
+        <span class="nx">tailCall</span> <span class="o">-&gt;</span> <span class="nx">batcher</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">files</span><span class="p">,</span> <span class="p">[])</span>
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 
