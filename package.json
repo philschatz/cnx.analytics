@@ -14,7 +14,7 @@
     "jquery": ">=1.8",
     "jquery-component": ">=1.8",
     "carrier": ">=0.1.7",
-    "nvd3": "git+https://github.com/philschatz/nvd3"
+    "nvd3": "git+https://github.com/philschatz/nvd3#gh-pages"
   },
   "devDependencies": {
     "docco": "~0.3",
