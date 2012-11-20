@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Analytics Console</title>
+    <title>Admin Console</title>
 
 <script type="text/javascript">var module = {}; </script>
 <script type="text/javascript" src="./jquery-component/dist/jquery.js"></script>
@@ -106,12 +106,13 @@ jQuery().ready(function() {
       $progress.attr('title', 'Completed ' + task.progress.finished + '/' + task.progress.total + ' units (' + percent + '%)');
 
       // Calculate Estimated Time to completion
-      var started = new Date(task.created).getTime();
-      var modified = new Date(task.modified).getTime();
-      var taken = modified - started;
-      var estimate = taken / fraction;
-      $estimate.attr('title', JSON.stringify(new Date(started + estimate)));
-
+      if (task.status != 'FAILED' && task.status != 'FINISHED') {
+        var started = new Date(task.created).getTime();
+        var modified = new Date(task.modified).getTime();
+        var taken = new Date().getTime() - started;
+        var estimate = taken / fraction;
+        $estimate.attr('title', JSON.stringify(new Date(started + estimate)));
+      }
 
       $kill.on('click', function() {
         jQuery.ajax(STATUS_URL + '/' + id + '/kill');
