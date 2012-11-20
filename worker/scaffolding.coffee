@@ -9,6 +9,13 @@ module.exports = exports = (argv) ->
   fs = require 'fs'
   jsdom = require 'jsdom'
 
+  class State
+    state = {}
+    toString: () -> JSON.stringify state
+    increment: (key, x=1) ->
+      state[key] ?= 0
+      state[key] += x
+
   # Array shuffler (so we randomly walk over the content)
   shuffle = (arr) ->
     i = arr.length
@@ -92,7 +99,7 @@ module.exports = exports = (argv) ->
     # Once we have a DOM started up read in the **unsafe** javascript
     process.stdin.on 'data', (jsBuf) ->
       func = safeishEval(jsBuf.toString())
-      state = {}
+      state = new State()
       progress = {total: 0, finished: 0}
 
       # Because there are many files to open we batch proceesing them
@@ -111,13 +118,13 @@ module.exports = exports = (argv) ->
         # If the pending queue is empty and there are no more files
         # to process then we're done!
         if files.length == 0 and pending.length == 0
-          console.log "FINISHED: #{JSON.stringify state}"
+          console.log "FINISHED: #{state.toString()}"
           return
 
         # If the pending queue is empty again, refill it
         if pending.length == 0 and files[0]
           console.log "PROGRESS: #{JSON.stringify progress}"
-          console.log "STATE: #{JSON.stringify state}" if argv.i
+          console.log "STATE: #{state.toString()}" if argv.i
 
           # Pop 40 pieces of content at time into the pending queue
           # (we'll be waiting for disk io)

@@ -96,8 +96,7 @@ define(['state', '$root'], function(state, $root) {
 
     /* Update the state after analyzing this
      * piece of content */
-    state[tag] = state[tag] || 0; /* Init if null */
-    state[tag] += 1;
+    state.increment(tag);
   });
 
 }) /* End requirejs define */
@@ -202,6 +201,7 @@ nv.addGraph(function() {
       <p>Please submit a new one by starting with the <a href="#code-server" data-toggle="tab">Server Code</a> tab.</p>
     </div>
     <div class="status alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">×</button>
       <p><strong>Finished!</strong> We finished processing the data on the server!</p>
       <p>You can still modify the <a href="#code-client" data-toggle="tab">Graph Code</a> and tweak the graph or start playing around with <a href="#more-examples" data-toggle="modal">Other Examples</a></p>
     </div>
@@ -272,10 +272,30 @@ var generateDataFromPreviewContent = function() {
         console.log "ERROR: #{JSON.stringify e}"
   */
 
-  var __DEFINE2, __VALIDS;
+  var __DEFINE2, __VALIDS, __STATE;
+
+  var State = (function() {
+    var state;
+    function State() {}
+    state = {};
+    State.prototype.toString = function() {
+      return JSON.stringify(state);
+    };
+    State.prototype.increment = function(key, x) {
+      var _ref;
+      if (x == null) {
+        x = 1;
+      }
+      if ((_ref = state[key]) == null) {
+        state[key] = 0;
+      }
+      return state[key] += x;
+    };
+    return State;
+  })();
 
   __VALIDS = {
-    state: {},
+    state: new State(),
     jQuery: jQuery,
     $root: previewContent.children().clone()
   };
@@ -308,7 +328,7 @@ var generateDataFromPreviewContent = function() {
     throw e;
   }
 
-  jQuery('textarea[name="data"]').val(JSON.stringify(__VALIDS.state));
+  jQuery('textarea[name="data"]').val(__VALIDS.state.toString());
 
   updateGraph();
 }
@@ -555,8 +575,7 @@ define(['state', '$root'], function(state, $root) {
     key = key[key.length-1];
 
     /* Update the state */
-    state[key] = state[key] || 0; /* Init if not already set */
-    state[key] += 1;
+    state.increment(key);
 
   });
 })
@@ -578,8 +597,7 @@ define(['state', '$root'], function(state, $root) {
     key = key[key.length-1];
 
     /* Update the state */
-    state[key] = state[key] || 0; /* Init if not already set */
-    state[key] += 1;
+    state.increment(key);
 
   });
 })
@@ -602,8 +620,7 @@ define(['state', '$root'], function(state, $root) {
 
     if(host.trim() == '') { return; }
     /* Update the state */
-    state[key] = state[key] || 0; /* Initialize if not already set */
-    state[key] += 1;
+    state.increment(key);
 
   });
 })
