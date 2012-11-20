@@ -45,11 +45,6 @@ module.exports = exports = (argv) ->
         # Use @toString so the pid is removed and reparse so we send the right content type
         res.status(404).send JSON.parse(@toString())
     update: (msg=null) ->
-      #if @status == 'FINISHED' or @status == 'FAILED'
-      #  message = @history[@history.length-1]
-      #  err = { event: @, message: "This event already completed with status #{@status} and message='#{message}'", newMessage: msg }
-      #  console.log err
-      #  throw err
       @modified = new Date()
       return if msg is null
       @history.push msg
