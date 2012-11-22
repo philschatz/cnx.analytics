@@ -101,8 +101,9 @@ define(['state', '$root'], function(state, $root) {
 
 }) /* End requirejs define */
 </textarea>
-          <div>
+          <div class="control-group error">
             <button class="btn btn-primary" type="submit">Submit!</button>
+            <span class="help-inline"></span>
           </div>
         </form>
       </div>
@@ -321,11 +322,13 @@ var generateDataFromPreviewContent = function() {
     func(__DEFINE2);
     // Added this line
     $('#code-server button[type=submit]').removeClass('disabled');
+    $('#code-server .help-inline').text('');
   } catch (e) {
     console.log("ERROR: " + (JSON.stringify(e)));
     // Added this line
     $('#code-server button[type=submit]').addClass('disabled');
-    throw e;
+    $('#code-server .help-inline').text(e.message);
+    //throw e;
   }
 
   jQuery('textarea[name="data"]').val(__VALIDS.state.toString());
@@ -609,7 +612,7 @@ define(['state', '$root'], function(state, $root) {
 
     <form action="" method="GET">
       <textarea name="src">
-define(['state', '$root'], function(state, $root) {
+define(['state', '$root', 'jQuery'], function(state, $root, jQuery) {
 
   /* External Link Domains */
   $root.find('link[url]').each(function(i, el) {
