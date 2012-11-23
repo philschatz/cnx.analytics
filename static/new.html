@@ -121,7 +121,9 @@ define(['state', '$root'], function(state, $root) {
  * - Reformats the data to a format the graph can render
  * - Configures the graph
  */
-nv.addGraph(function() {
+define(['nv', 'data'], function(nv, data) {
+
+
   /* HINT: change discreteBarChart to pieChart */
   var chart = nv.models.discreteBarChart()
       .x(function(d) { return d.label })
@@ -150,7 +152,7 @@ nv.addGraph(function() {
   for(key in data) {
     var count = data[key];
     /* Filter using MINIMUM_COUNT and FILTER_KEYS */
-    if (count > MINIMUM_COUNT && (FILTER_KEYS.indexOf(key) < 0)) {
+    if (count > MINIMUM_COUNT &amp;&amp; (FILTER_KEYS.indexOf(key) &lt; 0)) {
       values.push({label: key, value:count});
     }
   }
@@ -164,15 +166,10 @@ nv.addGraph(function() {
         {  "label" : "B" , "value" : 0 } ,
   */
 
-  /* Bind the chart to the data and tho the #chart div */
-  d3.select('#chart svg')
-      .datum(data)
-    .transition().duration(500)
-      .call(chart);
-
-  nv.utils.windowResize(chart.update);
-
-  return chart;
+  /* We can either return the configured chart or
+   * Both the chart and converted data
+   */
+  return {chart: chart, data: data};
 });
 </textarea>
       </div>
@@ -318,7 +315,8 @@ var generateDataFromPreviewContent = function() {
   try {
     // Added this line
     var func;
-    eval('func = function(define, state, jQuery) { ' + serverEditor.getValue() + '};');
+    // include 'window', 'document', 'state' and 'jQuery' so they get bound to 'undefined'
+    eval('func = function(define, window, document, state, jQuery) { ' + serverEditor.getValue() + '};');
     func(__DEFINE2);
     // Added this line
     $('#code-server button[type=submit]').removeClass('disabled');
@@ -339,8 +337,8 @@ var generateDataFromPreviewContent = function() {
 var updateGraph = function() {
   var preMarkup = '<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="nvd3/src/nv.d3.css"><script type="text/javascript" src="nvd3/lib/d3.v2.js"></script><script type="text/javascript" src="nvd3/lib/fisheye.js"></script><script type="text/javascript" src="nvd3/nv.d3.js"></script></head><body>';
   var midMarkup = '<script>var data = ';
-  var midMarkup2 = ';';
-  var postMarkup = '</script></body></html>';
+  var midMarkup2 = '; ' + 'var __CHART_SELECTOR = \'#chart svg\'; var __VALIDS = { nv: nv, data: data };\nvar __MY_CALLBACK = function(chartOrConfig) {\n\n  var chart = chartOrConfig.chart || chartOrConfig;\n  if (chartOrConfig.data) {\n    data = chartOrConfig.data;\n  }\n\n  nv.addGraph(function() {\n    d3.select(__CHART_SELECTOR)\n        .datum(data)\n      .transition().duration(500)\n        .call(chart);\n\n    nv.utils.windowResize(chart.update);\n    return chart;\n  });\n};\n\nvar define = function(dependencies, callback) {\n  var args, d;\n  args = (function() {\n    var _i, _len, _results;\n    _results = [];\n    for (_i = 0, _len = dependencies.length; _i < _len; _i++) {\n      d = dependencies[_i];\n      _results.push(__VALIDS[d]);\n    }\n    return _results;\n  })();\n  var ret = callback.apply(null, args);\n  __MY_CALLBACK(ret);\n};\n\nvar __FUNC= function(define, window, nv, data) { ';
+  var postMarkup = '; }; __FUNC(define);</script></body></html>';
 
   var previewFrame = $('#preview')[0];
   var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
@@ -630,63 +628,56 @@ define(['state', '$root', 'jQuery'], function(state, $root, jQuery) {
 </textarea>
 
 <textarea name="graph">
-/* Actual Data format:
-{ para: 1234,
-  section: 123,
-  math: 1123
-}
-*/
+define(['nv', 'data'], function(nv, data) {
 
-/* Strip domain prefixes off (This could be done on the server instead) */
-var data2 = {};
-for(key in data) {
-  var count = data[key];
-  var parts = key.split('.');
-  function incKey(key, count) {
-    data2[key] = data2[key] || 0;
-    data2[key] += count;
-  };
-  if (parts.length > 1) {
-    var key = parts[parts.length-2] + '.' +parts[parts.length-1];
-    incKey('*' + key, count);
+  /* Strip domain prefixes off
+   * (This could be done on the server instead)
+   */
+  var data2 = {};
+  for(key in data) {
+    var count = data[key];
+    var parts = key.split('.');
+    function incKey(key, count) {
+      data2[key] = data2[key] || 0;
+      data2[key] += count;
+    };
+    if (parts.length > 1) {
+      var key = parts[parts.length-2] + '.' +parts[parts.length-1];
+      incKey('*' + key, count);
+    }
   }
-}
-data = data2;
+  data = data2;
 
-/* Convert the actual format to
- * the pie chart format */
-var values = [];
-for(key in data) {
-  var count = data[key];
-  if (count > 50) {
-    values.push({label: key, value:count});
-  }
-
-}
-data = [ {key:'', values:values}];
-
-/* Expected format for the pie/bar chart:
-[ { key: "Cumulative Return",
-    values: [
-      {  "label" : "A" , "value" : -29.7 } ,
-      {  "label" : "B" , "value" : 0 } ,
-*/
-
-nv.addGraph(function() {
+  /* HINT: change discreteBarChart to pieChart */
   var chart = nv.models.discreteBarChart()
       .x(function(d) { return d.label })
       .y(function(d) { return d.value })
       .tooltips(true)
 
-  d3.select('#chart svg')
-      .datum(data)
-    .transition().duration(500)
-      .call(chart);
+  /* HINT: Play around with these to see the chart change. */
+  var MINIMUM_COUNT = 20;
+  var FILTER_KEYS = ['cnxn'];
 
-  nv.utils.windowResize(chart.update);
+  /* -------------- Danger: Below be dragons! -------------- */
 
-  return chart;
+  /* Convert the JSON Data from the server into a
+   * format the chart understands.
+   * You can also filter/rearrange/group the data at this point.
+   */
+
+  var values = [];
+  for(key in data) {
+    var count = data[key];
+    /* Filter using MINIMUM_COUNT and FILTER_KEYS */
+    if (count > MINIMUM_COUNT &amp;&amp; (FILTER_KEYS.indexOf(key) &lt; 0)) {
+      values.push({label: key, value:count});
+    }
+  }
+  data = [ {key:'', values:values}];
+
+  return {chart: chart, data: data};
 });
+
             </textarea>
       <button class="btn btn-primary" type="submit">Top External Domains Linked from Us</button>
     </form>
