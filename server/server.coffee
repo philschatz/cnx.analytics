@@ -164,6 +164,7 @@ module.exports = exports = (argv) ->
     id = TASKS.length
     TASKS.push promise
 
+    promise.source = rawJavascript
     spawnScaffolding(id, promise, rawJavascript)
 
     res.send "/tasks/#{id}"
