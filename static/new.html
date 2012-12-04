@@ -132,7 +132,7 @@ define(['nv', 'data'], function(nv, data) {
 
   /* HINT: Play around with these to see the chart change. */
   var MINIMUM_COUNT = 10;
-  var FILTER_KEYS = ['cnxn'];
+  var FILTER_KEYS = ['_meta'];
 
   /* -------------- Danger: Below be dragons! -------------- */
 
@@ -156,6 +156,12 @@ define(['nv', 'data'], function(nv, data) {
       values.push({label: key, value:count});
     }
   }
+  /* Sort by Key */
+  values.sort(function(a,b) {
+    var s = [a.label, b.label].sort();
+    return s[0] == a.label ? -1: 1;
+  });
+
   data = [ {key:'', values:values}];
 
 
@@ -171,6 +177,7 @@ define(['nv', 'data'], function(nv, data) {
    */
   return {chart: chart, data: data};
 });
+
 </textarea>
       </div>
       <div class="tab-pane" id="html-client">
