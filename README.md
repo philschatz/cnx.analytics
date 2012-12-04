@@ -105,3 +105,32 @@ with before submitting a Task.
 
 I like how that turned out!
 
+# Comparison to XPath/python
+
+Counting element frequency can be done with serverside XPath queries but difficulties arise when:
+
+* the query becomes more complicated
+* you need to run some other language to post process the data
+* you want to query unpublished content (ie check for broken links)
+
+## Examples of Limitations
+
+1. What are the most popular words?
+2. Which internal links are broken?
+3. Which top domains do we link to?
+   (this requires post processing the data using some other language like python/sed/awk)
+4. Which links were added in the last month?
+   (this requires knowledge of the SQL table)
+5. Which modules have Content MathML that is rendered differently (because it is in > 1 collection and those collection parameters are different)?
+   (this requires multiple passes, multiple xpaths, and python/sed/awk)
+
+## Benefits of CSS/Javascript/JSON
+
+I opted for using CSS/Javascript/JSON in favor of XPath/Python/SQL because:
+
+1. XPath won't work when we have non-xml content (pesky self-closing tags)
+2. Sandboxing javascript is easier than sandboxing python (to run on the server)
+3. You can preview your task before running it
+4. I think people are more familiar with CSS than XPath/XSLT
+5. These queries don't need to be run on the live repository with privileged access
+6. These queries can be run on a collection zip file (no need to populate a SQL server)
