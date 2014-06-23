@@ -689,6 +689,101 @@ define(['nv', 'data'], function(nv, data) {
       <button class="btn btn-primary" type="submit">Top External Domains Linked from Us</button>
     </form>
 
+    <form action="" method="GET">
+      <textarea name="src">
+define(['state', '$root', 'jQuery', 'metadata'], function(state, $root, $, md) {
+
+  if(md) {
+    var id = md.id;
+
+    /* Links with child Elements */
+    $root.find('link').each(function(i, el) {
+      var link = $(el);
+      if(link.attr('url')) {
+        state.increment2(id, 'external');
+      } else if (link.attr('document')) {
+        state.increment2(id, 'inter-module');
+      } else if (link.attr('target-id')) {
+        state.increment2(id, 'internal');
+      } else if (link.attr('resource')) {
+        state.increment2(id, 'resource');
+      } else {
+        state.increment2(id, 'other');
+      }
+
+    });
+
+  }
+})
+</textarea>
+
+<textarea name="graph">
+/* This code runs in the browser and:
+ * - Takes the JSON from the server (the 'data' variable)
+ * - Massages it by filtering/organizing results
+ * - Reformats the data to a format the graph can render
+ * - Configures the graph
+ */
+define(['nv', 'data'], function(nv, data) {
+
+
+  /* HINT: change discreteBarChart to pieChart */
+  var chart = nv.models.pieChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .tooltips(true)
+
+  /* HINT: Play around with these to see the chart change. */
+  var MINIMUM_COUNT = 0;
+  var FILTER_KEYS = ['_meta'];
+
+  /* -------------- Danger: Below be dragons! -------------- */
+
+  /* Convert the JSON Data from the server into a
+   * format the chart understands.
+   * You can also filter/rearrange/group the data at this point.
+   */
+
+  /* JSON Data format from the server:
+  { para: 1234,
+    section: 123,
+    math: 1123
+  }
+  */
+
+  var values = [];
+  for(key in data) {
+    var count = data[key];
+    /* Filter using MINIMUM_COUNT and FILTER_KEYS */
+    if (count > MINIMUM_COUNT && (FILTER_KEYS.indexOf(key) < 0)) {
+      values.push({label: key, value:count});
+    }
+  }
+  /* Sort by Key */
+  values.sort(function(a,b) {
+    var s = [a.label, b.label].sort();
+    return s[0] == a.label ? -1: 1;
+  });
+
+  data = [ {key:'', values:values}];
+
+
+  /* Expected format for the pie/bar chart:
+  [ { key: "Chart Title",
+      values: [
+        {  "label" : "A" , "value" : -29.7 } ,
+        {  "label" : "B" , "value" : 0 } ,
+  */
+
+  /* We can either return the configured chart or
+   * Both the chart and converted data
+   */
+  return {chart: chart, data: data};
+});
+            </textarea>
+      <button class="btn btn-primary" type="submit">Top External Domains Linked from Us</button>
+    </form>
+
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>

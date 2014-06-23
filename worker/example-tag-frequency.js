@@ -21,8 +21,7 @@ $root.find('content *').each(function(i, el) {
 
   /* Update the state after analyzing this
    * piece of content */
-  state[tag] = state[tag] || 0; /* Init if null */
-  state[tag] += 1;
+  state.increment(tag);
 });
 
 }) /* End requirejs define */

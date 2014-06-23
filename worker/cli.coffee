@@ -20,7 +20,7 @@ argv = optimist
   )
   .options('i',
     alias     : 'intermediate'
-    default   : false
+    default   : true
     describe  : 'Periodically show intermediate state (every 40 ticks)'
   )
   .options('r',

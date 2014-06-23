@@ -102,7 +102,8 @@ module.exports = exports = (argv) ->
       FetchExternalResources: false # ['img']
       ProcessExternalResources: false
 
-  jQuery = require('jQuery').create(doc.createWindow())
+  jQuery = require('jQuery')
+  jQuery = jQuery(doc.createWindow())
 
   # Once we have a DOM started up read in the **unsafe** javascript
   process.stdin.on 'data', (jsBuf) ->
@@ -160,7 +161,6 @@ module.exports = exports = (argv) ->
                 maintainers: @get 'maintainers'
                 licensors: @get 'licensors'
 
-              console.log metadata.created
               new Properties().load resourcesFile, (err) ->
                 resources = []
                 for sectionName in @sections()
@@ -193,7 +193,7 @@ module.exports = exports = (argv) ->
                 try
                   func define2
                 catch e
-                  console.log "ERROR: #{JSON.stringify e}"
+                  console.log "ERROR: #{e}"
 
                 batchTick()
 
@@ -203,7 +203,7 @@ module.exports = exports = (argv) ->
     # * Shuffle them
     # * Drop some of them if we are only running on a subset
     # * Start the batch analysis process
-    findFiles argv.c, /index\.cnxml/, (err, files) ->
+    findFiles argv.c, /\.cnxml$/, (err, files) ->
       if argv.r
         shuffle(files)
       # If this worker is running on a subset of content then
