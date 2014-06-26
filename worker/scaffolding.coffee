@@ -9,22 +9,22 @@ module.exports = exports = (argv) ->
   fs = require 'fs'
   jsdom = require 'jsdom'
   Properties = require 'enhanced-properties'
+  _ = require 'underscore'
 
   MAX_ID_COUNT = 20
   class State
     state = {}
+    currentId: null
     toString: () -> JSON.stringify state
     increment: (key, x=1) ->
       state[key] ?= 0
       state[key] += x
-    increment2: (id, key, x=1) ->
-      @increment key, x
+
       # Store the module id in a special '_meta_' key
-      state['_meta'] ?= {}
-      meta = state['_meta']
+      meta = state['_meta'] ?= {}
       meta[key] ?= []
-      if meta[key].length < MAX_ID_COUNT and meta[key].indexOf(id) < 0
-        meta[key].push id
+      if meta[key].length < MAX_ID_COUNT and meta[key].indexOf(@currentId) < 0
+        meta[key].push(@currentId)
 
 
   # Array shuffler (so we randomly walk over the content)
@@ -175,6 +175,8 @@ module.exports = exports = (argv) ->
 
                 $root = jQuery('root').children() # The <document> element for modules
 
+                state.currentId = path.basename(href)
+
                 # Emulate requirejs syntax by providing a `define` function
                 # that provides access to objects.
                 # This way we (backend) can see/limit which features are being
@@ -182,7 +184,9 @@ module.exports = exports = (argv) ->
                 #   or parse the DOM of it isn't going to be used.
                 valids =
                   state: state
+                  underscore: _
                   jQuery: jQuery
+                  jquery: jQuery
                   $root: $root
                   metadata: metadata
                   resources: resources
