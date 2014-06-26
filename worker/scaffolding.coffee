@@ -102,7 +102,7 @@ module.exports = exports = (argv) ->
       FetchExternalResources: false # ['img']
       ProcessExternalResources: false
 
-  jQuery = require('jQuery')
+  jQuery = require('jquery')
   jQuery = jQuery(doc.createWindow())
 
   # Once we have a DOM started up read in the **unsafe** javascript
